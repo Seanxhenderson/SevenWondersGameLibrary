@@ -107,8 +107,9 @@
     <None Include="project.json" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CardFactory.cs" />
     <Compile Include="Cards.cs" />
-    <Compile Include="Class1.cs" />
+    <Compile Include="ICards.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Properties\SevenWondersGameLibrary.rd.xml" />
   </ItemGroup>

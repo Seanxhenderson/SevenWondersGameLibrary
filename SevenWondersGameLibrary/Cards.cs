@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -6,93 +7,172 @@ using System.Threading.Tasks;
 
 namespace SevenWondersGameLibrary
 {
-    [Flags]
-    public enum RawMaterialType
+    public abstract class AgeCard : IAgeCard
     {
-        Clay = 0x00,
-        Ore = 0x01,
-        Stone = 0x02,
-        Wood = 0x04
+        public AgeCard(
+            Age age, 
+            string title, 
+            string description, 
+            uint minimumNumberOfPlayers, 
+            uint goldCost, 
+            RawMaterialResourceCost rawMaterialResourceCost,
+            ManufacturedMaterialResourceCost manufacturedMaterialResourceCost)
+        {
+            this.Age = age;
+            this.Title = title;
+            this.Description = description;
+            this.MinimumNumberOfPlayers = minimumNumberOfPlayers;
+            this.GoldCost = goldCost;
+            this.RawMaterialResourceCost = rawMaterialResourceCost;
+            this.ManufacturedMaterialResourceCost = manufacturedMaterialResourceCost;
+        }
+
+        public Age Age
+        {
+            get;
+            private set;
+        }
+
+        public IEnumerable<IAgeCard> ChildCards
+        {
+            get
+            {
+                throw new NotImplementedException();
+            }
+        }
+
+        public string Description
+        {
+            get;
+            private set;
+        }
+
+        public uint GoldCost
+        {
+            get;
+            private set;
+        }
+
+        public string ImageUrl
+        {
+            get
+            {
+                throw new NotImplementedException();
+            }
+        }
+
+        public uint MinimumNumberOfPlayers
+        {
+            get;
+            private set;
+        }
+
+        public IAgeCard ParentCard
+        {
+            get
+            {
+                throw new NotImplementedException();
+            }
+        }
+
+        public RawMaterialResourceCost RawMaterialResourceCost
+        {
+            get;
+            private set;
+        }
+
+        public ManufacturedMaterialResourceCost ManufacturedMaterialResourceCost
+        {
+            get;
+            private set;
+        }
+
+        public string Title
+        {
+            get;
+            private set;
+        }
     }
 
-    [Flags]
-    public enum ManufacturedGoodType
+    //public sealed class RawMaterialCard : AgeCard, IRawMaterialCard
+    //{
+    //    public uint Amount
+    //    {
+    //        get
+    //        {
+    //            throw new NotImplementedException();
+    //        }
+    //    }
+
+    //    public RawMaterialType ResourceType
+    //    {
+    //        get
+    //        {
+    //            throw new NotImplementedException();
+    //        }
+    //    }
+    //}
+
+    //public sealed class ManufacturedGoodCard : AgeCard, IManufacturedGoodCard
+    //{
+    //    public uint Amount
+    //    {
+    //        get
+    //        {
+    //            throw new NotImplementedException();
+    //        }
+    //    }
+
+    //    public ManufacturedGoodType ResourceType
+    //    {
+    //        get
+    //        {
+    //            throw new NotImplementedException();
+    //        }
+    //    }
+    //}
+
+    public sealed class CultureCard : AgeCard, ICultureCard
     {
-        Glass = 0x00,
-        Loom = 0x01,
-        Papyrus = 0x02
+        public CultureCard(
+            Age age, 
+            string title, 
+            string description, 
+            uint minimumNumberOfPlayers, 
+            uint victoryValue,
+            RawMaterialResourceCost rawMaterialResourceCost,
+            ManufacturedMaterialResourceCost manufacturedMaterialResourceCost)
+            : base(age, title, description, minimumNumberOfPlayers, 0, rawMaterialResourceCost, manufacturedMaterialResourceCost)
+        {
+            this.VictoryValue = victoryValue;
+        }
+
+        public uint VictoryValue
+        {
+            get;
+            private set;
+        }
     }
 
-    public enum Age
+    public sealed class MilitaryCard : AgeCard, IMilitaryCard
     {
-        One,
-        Two,
-        Three
-    }
+        public MilitaryCard(
+            Age age,
+            string title,
+            string description,
+            uint minimumNumberOfPlayers,
+            uint militaryValue,
+            RawMaterialResourceCost rawMaterialResourceCost,
+            ManufacturedMaterialResourceCost manufacturedMaterialResourceCost)
+            : base(age, title, description, minimumNumberOfPlayers, 0, rawMaterialResourceCost, manufacturedMaterialResourceCost)
+        {
+            this.MilitaryValue = militaryValue;
+        }
 
-    public enum ScienceType
-    {
-        Gear,
-        Tools,
-        Glyph
-    }
-
-    interface ICard
-    {
-        string Title { get; }
-
-        string Description { get; }
-
-        string ImageUrl { get; }
-    }
-
-    interface IAgeCard : ICard
-    {
-        Age Age { get; }
-
-        IReadOnlyDictionary<RawMaterialType, uint> RawMaterialCost { get; }
-
-        IReadOnlyDictionary<ManufacturedGoodType, uint> ManufacturedGoodCost { get; }
-
-        IAgeCard CardCost { get; }
-    }
-
-    interface RawMaterialCard : IAgeCard
-    {
-        RawMaterialType Type { get; }
-
-        uint Amount { get; }
-    }
-
-    interface ManufacturedGoodTypeCard : IAgeCard
-    {
-        ManufacturedGoodType Type { get; }
-
-        uint Amount { get; }
-    }
-
-    interface IMilitaryCard : IAgeCard
-    {
-        uint Strength { get; }
-    }
-
-    interface IScienceCard : IAgeCard
-    {
-        ScienceType ScienceType { get; }
-    }
-
-    interface ICivilianStructureCard : IAgeCard
-    {
-        uint VictoryPoints { get; }
-    }
-
-    interface ICommercialStructureCard : IAgeCard
-    {
-
-    }
-
-    interface IGuildCard : IAgeCard
-    {
-
+        public uint MilitaryValue
+        {
+            get;
+            private set;
+        }
     }
 }
