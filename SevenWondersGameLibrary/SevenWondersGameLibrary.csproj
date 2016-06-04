@@ -108,8 +108,11 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="CardFactory.cs" />
-    <Compile Include="Cards.cs" />
-    <Compile Include="ICards.cs" />
+    <Compile Include="DataModels\CardIds.cs" />
+    <Compile Include="DataModels\Cards.cs" />
+    <Compile Include="DataModels\ICards.cs" />
+    <Compile Include="DataModels\Resources.cs" />
+    <Compile Include="DataModels\TypeEnums.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Properties\SevenWondersGameLibrary.rd.xml" />
   </ItemGroup>

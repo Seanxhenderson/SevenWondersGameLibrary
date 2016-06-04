@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace SevenWondersGameLibrary
+namespace SevenWondersGameLibrary.DataModels
 {
     public abstract class AgeCard : IAgeCard
     {
@@ -94,43 +94,47 @@ namespace SevenWondersGameLibrary
         }
     }
 
-    //public sealed class RawMaterialCard : AgeCard, IRawMaterialCard
-    //{
-    //    public uint Amount
-    //    {
-    //        get
-    //        {
-    //            throw new NotImplementedException();
-    //        }
-    //    }
+    public sealed class RawMaterialCard : AgeCard, IRawMaterialCard
+    {
+        public RawMaterialCard(
+            Age age,
+            string title,
+            string description,
+            uint minimumNumberOfPlayers,
+            IEnumerable<RawMaterialResourceToken> resources,
+            uint goldCost)
+            : base(age, title, description, minimumNumberOfPlayers, goldCost, RawMaterialResourceCost.Free, ManufacturedMaterialResourceCost.Free)
+        {
+            this.Resources = resources;
+        }
 
-    //    public RawMaterialType ResourceType
-    //    {
-    //        get
-    //        {
-    //            throw new NotImplementedException();
-    //        }
-    //    }
-    //}
+        public IEnumerable<RawMaterialResourceToken> Resources
+        {
+            get;
+            private set;
+        }
+    }
 
-    //public sealed class ManufacturedGoodCard : AgeCard, IManufacturedGoodCard
-    //{
-    //    public uint Amount
-    //    {
-    //        get
-    //        {
-    //            throw new NotImplementedException();
-    //        }
-    //    }
+    public sealed class ManufacturedGoodCard : AgeCard, IManufacturedMaterialCard
+    {
+        public ManufacturedGoodCard(
+            Age age,
+            string title,
+            string description,
+            uint minimumNumberOfPlayers,
+            IEnumerable<ManufacturedMaterialResourceToken> resources,
+            uint goldCost)
+            : base(age, title, description, minimumNumberOfPlayers, goldCost, RawMaterialResourceCost.Free, ManufacturedMaterialResourceCost.Free)
+        {
+            this.Resources = resources;
+        }
 
-    //    public ManufacturedGoodType ResourceType
-    //    {
-    //        get
-    //        {
-    //            throw new NotImplementedException();
-    //        }
-    //    }
-    //}
+        public IEnumerable<ManufacturedMaterialResourceToken> Resources 
+        {
+            get;
+            private set;
+        }
+    }
 
     public sealed class CultureCard : AgeCard, ICultureCard
     {
@@ -170,6 +174,27 @@ namespace SevenWondersGameLibrary
         }
 
         public uint MilitaryValue
+        {
+            get;
+            private set;
+        }
+    }
+
+    public sealed class ScienceCard : AgeCard, IScienceCard
+    {
+        public ScienceCard(
+            Age age,
+            string title,
+            string description,
+            uint minimumNumberOfPlayers,
+            ScienceType scienceType,
+            ManufacturedMaterialResourceCost manufacturedMaterialResourceCost)
+            : base(age, title, description, minimumNumberOfPlayers, 0, RawMaterialResourceCost.Free, manufacturedMaterialResourceCost)
+        {
+            this.ScienceType = scienceType;
+        }
+
+        public ScienceType ScienceType
         {
             get;
             private set;
