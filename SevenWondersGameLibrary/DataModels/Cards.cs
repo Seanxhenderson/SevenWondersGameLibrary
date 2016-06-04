@@ -10,6 +10,7 @@ namespace SevenWondersGameLibrary.DataModels
     public abstract class AgeCard : IAgeCard
     {
         public AgeCard(
+            Guid id,
             Age age, 
             string title, 
             string description, 
@@ -18,6 +19,7 @@ namespace SevenWondersGameLibrary.DataModels
             RawMaterialResourceCost rawMaterialResourceCost,
             ManufacturedMaterialResourceCost manufacturedMaterialResourceCost)
         {
+            this.Id = id;
             this.Age = age;
             this.Title = title;
             this.Description = description;
@@ -27,18 +29,16 @@ namespace SevenWondersGameLibrary.DataModels
             this.ManufacturedMaterialResourceCost = manufacturedMaterialResourceCost;
         }
 
-        public Age Age
+        public Guid Id
         {
             get;
             private set;
         }
 
-        public IEnumerable<IAgeCard> ChildCards
+        public Age Age
         {
-            get
-            {
-                throw new NotImplementedException();
-            }
+            get;
+            private set;
         }
 
         public string Description
@@ -67,7 +67,15 @@ namespace SevenWondersGameLibrary.DataModels
             private set;
         }
 
-        public IAgeCard ParentCard
+        public IAgeCard PreviousStageCard
+        {
+            get
+            {
+                throw new NotImplementedException();
+            }
+        }
+
+        public IEnumerable<IAgeCard> NextStageCards
         {
             get
             {
@@ -97,13 +105,14 @@ namespace SevenWondersGameLibrary.DataModels
     public sealed class RawMaterialCard : AgeCard, IRawMaterialCard
     {
         public RawMaterialCard(
+            Guid id,
             Age age,
             string title,
             string description,
             uint minimumNumberOfPlayers,
             IEnumerable<RawMaterialResourceToken> resources,
             uint goldCost)
-            : base(age, title, description, minimumNumberOfPlayers, goldCost, RawMaterialResourceCost.Free, ManufacturedMaterialResourceCost.Free)
+            : base(id, age, title, description, minimumNumberOfPlayers, goldCost, RawMaterialResourceCost.Free, ManufacturedMaterialResourceCost.Free)
         {
             this.Resources = resources;
         }
@@ -118,13 +127,14 @@ namespace SevenWondersGameLibrary.DataModels
     public sealed class ManufacturedGoodCard : AgeCard, IManufacturedMaterialCard
     {
         public ManufacturedGoodCard(
+            Guid id,
             Age age,
             string title,
             string description,
             uint minimumNumberOfPlayers,
             IEnumerable<ManufactoredMaterialResourceToken> resources,
             uint goldCost)
-            : base(age, title, description, minimumNumberOfPlayers, goldCost, RawMaterialResourceCost.Free, ManufacturedMaterialResourceCost.Free)
+            : base(id, age, title, description, minimumNumberOfPlayers, goldCost, RawMaterialResourceCost.Free, ManufacturedMaterialResourceCost.Free)
         {
             this.Resources = resources;
         }
@@ -139,6 +149,7 @@ namespace SevenWondersGameLibrary.DataModels
     public sealed class CultureCard : AgeCard, ICultureCard
     {
         public CultureCard(
+            Guid id,
             Age age, 
             string title, 
             string description, 
@@ -146,7 +157,7 @@ namespace SevenWondersGameLibrary.DataModels
             uint victoryValue,
             RawMaterialResourceCost rawMaterialResourceCost,
             ManufacturedMaterialResourceCost manufacturedMaterialResourceCost)
-            : base(age, title, description, minimumNumberOfPlayers, 0, rawMaterialResourceCost, manufacturedMaterialResourceCost)
+            : base(id, age, title, description, minimumNumberOfPlayers, 0, rawMaterialResourceCost, manufacturedMaterialResourceCost)
         {
             this.VictoryValue = victoryValue;
         }
@@ -161,6 +172,7 @@ namespace SevenWondersGameLibrary.DataModels
     public sealed class MilitaryCard : AgeCard, IMilitaryCard
     {
         public MilitaryCard(
+            Guid id,
             Age age,
             string title,
             string description,
@@ -168,7 +180,7 @@ namespace SevenWondersGameLibrary.DataModels
             uint militaryValue,
             RawMaterialResourceCost rawMaterialResourceCost,
             ManufacturedMaterialResourceCost manufacturedMaterialResourceCost)
-            : base(age, title, description, minimumNumberOfPlayers, 0, rawMaterialResourceCost, manufacturedMaterialResourceCost)
+            : base(id, age, title, description, minimumNumberOfPlayers, 0, rawMaterialResourceCost, manufacturedMaterialResourceCost)
         {
             this.MilitaryValue = militaryValue;
         }
@@ -183,13 +195,14 @@ namespace SevenWondersGameLibrary.DataModels
     public sealed class ScienceCard : AgeCard, IScienceCard
     {
         public ScienceCard(
+            Guid id,
             Age age,
             string title,
             string description,
             uint minimumNumberOfPlayers,
             ScienceType scienceType,
             ManufacturedMaterialResourceCost manufacturedMaterialResourceCost)
-            : base(age, title, description, minimumNumberOfPlayers, 0, RawMaterialResourceCost.Free, manufacturedMaterialResourceCost)
+            : base(id, age, title, description, minimumNumberOfPlayers, 0, RawMaterialResourceCost.Free, manufacturedMaterialResourceCost)
         {
             this.ScienceType = scienceType;
         }
@@ -204,12 +217,13 @@ namespace SevenWondersGameLibrary.DataModels
     public abstract class CommerceCardBase : AgeCard, ICommerceCard
     {
         public CommerceCardBase(
+            Guid id,
             Age age,
             string title,
             string description,
             uint minimumNumberOfPlayers,
             ApplicableDirection usabilityDirection)
-            : base(age, title, description, minimumNumberOfPlayers, 0, RawMaterialResourceCost.Free, ManufacturedMaterialResourceCost.Free)
+            : base(id, age, title, description, minimumNumberOfPlayers, 0, RawMaterialResourceCost.Free, ManufacturedMaterialResourceCost.Free)
         {
             this.UsabilityDirection = usabilityDirection;
         }
@@ -224,6 +238,7 @@ namespace SevenWondersGameLibrary.DataModels
     public sealed class CommerceRawMaterialDiscountCard : CommerceCardBase, ICommerceRawMaterialDiscountCard
     {
         public CommerceRawMaterialDiscountCard(
+            Guid id,
             Age age,
             string title,
             string description,
@@ -231,7 +246,7 @@ namespace SevenWondersGameLibrary.DataModels
             uint discountValue,
             IEnumerable<RawMaterialResourceToken> rawMaterialTokens,
             ApplicableDirection usabilityDirection)
-            : base(age, title, description, minimumNumberOfPlayers, usabilityDirection)
+            : base(id, age, title, description, minimumNumberOfPlayers, usabilityDirection)
         {
             this.DiscountedCost = discountValue;
             this.RawMaterialTokens = rawMaterialTokens;
@@ -253,6 +268,7 @@ namespace SevenWondersGameLibrary.DataModels
     public sealed class CommerceManufactoredMaterialDiscountCard : CommerceCardBase, ICommerceManufactoredMaterialDiscountCard
     {
         public CommerceManufactoredMaterialDiscountCard(
+            Guid id,
             Age age,
             string title,
             string description,
@@ -260,7 +276,7 @@ namespace SevenWondersGameLibrary.DataModels
             uint discountValue,
             IEnumerable<ManufactoredMaterialResourceToken> manufactoredMaterialTokens,
             ApplicableDirection usabilityDirection)
-            : base(age, title, description, minimumNumberOfPlayers, usabilityDirection)
+            : base(id, age, title, description, minimumNumberOfPlayers, usabilityDirection)
         {
             this.DiscountedCost = discountValue;
             this.ManufactoredMaterialTokens = manufactoredMaterialTokens;
@@ -282,13 +298,14 @@ namespace SevenWondersGameLibrary.DataModels
     public sealed class CommerceGoldCard : CommerceCardBase, ICommerceGoldCard
     {
         public CommerceGoldCard(
+            Guid id,
             Age age,
             string title,
             string description,
             uint minimumNumberOfPlayers,
             uint goldValue,
             ApplicableDirection usabilityDirection)
-            : base(age, title, description, minimumNumberOfPlayers, usabilityDirection)
+            : base(id, age, title, description, minimumNumberOfPlayers, usabilityDirection)
         {
             this.GoldValue = goldValue;
         }

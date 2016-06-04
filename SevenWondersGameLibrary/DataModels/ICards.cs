@@ -9,6 +9,8 @@ namespace SevenWondersGameLibrary.DataModels
 {
     public interface ICard
     {
+        Guid Id { get; }
+
         string Title { get; }
 
         string Description { get; }
@@ -26,9 +28,9 @@ namespace SevenWondersGameLibrary.DataModels
 
         uint GoldCost { get; }
 
-        IAgeCard ParentCard { get; }
+        IAgeCard PreviousStageCard { get; }
 
-        IEnumerable<IAgeCard> ChildCards { get; }
+        IEnumerable<IAgeCard> NextStageCards { get; }
 
         uint MinimumNumberOfPlayers { get; }
     }
