@@ -122,14 +122,14 @@ namespace SevenWondersGameLibrary.DataModels
             string title,
             string description,
             uint minimumNumberOfPlayers,
-            IEnumerable<ManufacturedMaterialResourceToken> resources,
+            IEnumerable<ManufactoredMaterialResourceToken> resources,
             uint goldCost)
             : base(age, title, description, minimumNumberOfPlayers, goldCost, RawMaterialResourceCost.Free, ManufacturedMaterialResourceCost.Free)
         {
             this.Resources = resources;
         }
 
-        public IEnumerable<ManufacturedMaterialResourceToken> Resources 
+        public IEnumerable<ManufactoredMaterialResourceToken> Resources 
         {
             get;
             private set;
@@ -195,6 +195,105 @@ namespace SevenWondersGameLibrary.DataModels
         }
 
         public ScienceType ScienceType
+        {
+            get;
+            private set;
+        }
+    }
+
+    public abstract class CommerceCardBase : AgeCard, ICommerceCard
+    {
+        public CommerceCardBase(
+            Age age,
+            string title,
+            string description,
+            uint minimumNumberOfPlayers,
+            ApplicableDirection usabilityDirection)
+            : base(age, title, description, minimumNumberOfPlayers, 0, RawMaterialResourceCost.Free, ManufacturedMaterialResourceCost.Free)
+        {
+            this.UsabilityDirection = usabilityDirection;
+        }
+
+        public ApplicableDirection UsabilityDirection
+        {
+            get;
+            protected set;
+        }
+    }
+
+    public sealed class CommerceRawMaterialDiscountCard : CommerceCardBase, ICommerceRawMaterialDiscountCard
+    {
+        public CommerceRawMaterialDiscountCard(
+            Age age,
+            string title,
+            string description,
+            uint minimumNumberOfPlayers,
+            uint discountValue,
+            IEnumerable<RawMaterialResourceToken> rawMaterialTokens,
+            ApplicableDirection usabilityDirection)
+            : base(age, title, description, minimumNumberOfPlayers, usabilityDirection)
+        {
+            this.DiscountedCost = discountValue;
+            this.RawMaterialTokens = rawMaterialTokens;
+        }
+
+        public uint DiscountedCost
+        {
+            get;
+            private set;
+        }
+
+        public IEnumerable<RawMaterialResourceToken> RawMaterialTokens
+        {
+            get;
+            private set;
+        }
+    }
+
+    public sealed class CommerceManufactoredMaterialDiscountCard : CommerceCardBase, ICommerceManufactoredMaterialDiscountCard
+    {
+        public CommerceManufactoredMaterialDiscountCard(
+            Age age,
+            string title,
+            string description,
+            uint minimumNumberOfPlayers,
+            uint discountValue,
+            IEnumerable<ManufactoredMaterialResourceToken> manufactoredMaterialTokens,
+            ApplicableDirection usabilityDirection)
+            : base(age, title, description, minimumNumberOfPlayers, usabilityDirection)
+        {
+            this.DiscountedCost = discountValue;
+            this.ManufactoredMaterialTokens = manufactoredMaterialTokens;
+        }
+
+        public uint DiscountedCost
+        {
+            get;
+            private set;
+        }
+
+        public IEnumerable<ManufactoredMaterialResourceToken> ManufactoredMaterialTokens
+        {
+            get;
+            private set;
+        }
+    }
+
+    public sealed class CommerceGoldCard : CommerceCardBase, ICommerceGoldCard
+    {
+        public CommerceGoldCard(
+            Age age,
+            string title,
+            string description,
+            uint minimumNumberOfPlayers,
+            uint goldValue,
+            ApplicableDirection usabilityDirection)
+            : base(age, title, description, minimumNumberOfPlayers, usabilityDirection)
+        {
+            this.GoldValue = goldValue;
+        }
+
+        public uint GoldValue
         {
             get;
             private set;

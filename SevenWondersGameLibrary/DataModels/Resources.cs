@@ -41,9 +41,9 @@ namespace SevenWondersGameLibrary.DataModels
         }
     }
 
-    public class ManufacturedMaterialResourceToken : ResourceToken
+    public class ManufactoredMaterialResourceToken : ResourceToken
     {
-        public ManufacturedMaterialResourceToken(ManufacturedMaterialType type, uint tokenValue)
+        public ManufactoredMaterialResourceToken(ManufacturedMaterialType type, uint tokenValue)
             : base(tokenValue)
         {
             this.Type = type;
@@ -51,14 +51,14 @@ namespace SevenWondersGameLibrary.DataModels
 
         public ManufacturedMaterialType Type { get; private set; }
 
-        public static ManufacturedMaterialResourceToken GetUnitToken(ManufacturedMaterialType type)
+        public static ManufactoredMaterialResourceToken GetUnitToken(ManufacturedMaterialType type)
         {
-            return new ManufacturedMaterialResourceToken(type, 1);
+            return new ManufactoredMaterialResourceToken(type, 1);
         }
 
-        public static ManufacturedMaterialResourceToken GetDoubleToken(ManufacturedMaterialType type)
+        public static ManufactoredMaterialResourceToken GetDoubleToken(ManufacturedMaterialType type)
         {
-            return new ManufacturedMaterialResourceToken(type, 2);
+            return new ManufactoredMaterialResourceToken(type, 2);
         }
     }
 
@@ -112,9 +112,9 @@ namespace SevenWondersGameLibrary.DataModels
         }
     }
 
-    public class ManufacturedMaterialResourceCost : IEnumerable<ManufacturedMaterialResourceToken>
+    public class ManufacturedMaterialResourceCost : IEnumerable<ManufactoredMaterialResourceToken>
     {
-        private List<ManufacturedMaterialResourceToken> resourceTokens = null;
+        private List<ManufactoredMaterialResourceToken> resourceTokens = null;
 
         private ManufacturedMaterialResourceCost()
             : this(0, 0, 0)
@@ -123,15 +123,15 @@ namespace SevenWondersGameLibrary.DataModels
 
         public ManufacturedMaterialResourceCost(uint glassCost, uint loomCost, uint papyrusCost)
         {
-            this.resourceTokens = new List<ManufacturedMaterialResourceToken>
+            this.resourceTokens = new List<ManufactoredMaterialResourceToken>
             {
-                new ManufacturedMaterialResourceToken(ManufacturedMaterialType.Glass, glassCost),
-                new ManufacturedMaterialResourceToken(ManufacturedMaterialType.Loom, loomCost),
-                new ManufacturedMaterialResourceToken(ManufacturedMaterialType.Papyrus, papyrusCost)
+                new ManufactoredMaterialResourceToken(ManufacturedMaterialType.Glass, glassCost),
+                new ManufactoredMaterialResourceToken(ManufacturedMaterialType.Loom, loomCost),
+                new ManufactoredMaterialResourceToken(ManufacturedMaterialType.Papyrus, papyrusCost)
             };
         }
 
-        public ManufacturedMaterialResourceToken this[int index]
+        public ManufactoredMaterialResourceToken this[int index]
         {
             get { return resourceTokens[index]; }
             set { resourceTokens.Insert(index, value); }
@@ -150,7 +150,7 @@ namespace SevenWondersGameLibrary.DataModels
             }
         }
 
-        public IEnumerator<ManufacturedMaterialResourceToken> GetEnumerator()
+        public IEnumerator<ManufactoredMaterialResourceToken> GetEnumerator()
         {
             return resourceTokens.GetEnumerator();
         }

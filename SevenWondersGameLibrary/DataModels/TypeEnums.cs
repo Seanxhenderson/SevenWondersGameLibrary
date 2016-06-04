@@ -8,10 +8,14 @@ namespace SevenWondersGameLibrary.DataModels
 {
     public enum ApplicableDirection
     {
+        None,
         Self,
         Left,
         Right,
-        Both
+        LeftAndRight,
+        LeftAndSelf,
+        RightAndSelf,
+        All
     }
 
     [Flags]

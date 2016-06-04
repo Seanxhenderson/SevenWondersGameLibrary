@@ -40,7 +40,7 @@ namespace SevenWondersGameLibrary.DataModels
 
     public interface IManufacturedMaterialCard : IAgeCard
     {
-        IEnumerable<ManufacturedMaterialResourceToken> Resources { get; }
+        IEnumerable<ManufactoredMaterialResourceToken> Resources { get; }
     }
 
     public interface ICultureCard : IAgeCard
@@ -58,9 +58,28 @@ namespace SevenWondersGameLibrary.DataModels
         ScienceType ScienceType { get; }
     }
 
-    public interface ICommercialCard : IAgeCard
+    public interface ICommerceCard : IAgeCard
     {
-        ApplicableDirection Users { get; }
+        ApplicableDirection UsabilityDirection { get; }
+    }
+
+    public interface ICommerceRawMaterialDiscountCard : ICommerceCard
+    {
+        IEnumerable<RawMaterialResourceToken> RawMaterialTokens { get; }
+
+        uint DiscountedCost { get; }
+    }
+
+    public interface ICommerceManufactoredMaterialDiscountCard : ICommerceCard
+    {
+        IEnumerable<ManufactoredMaterialResourceToken> ManufactoredMaterialTokens { get; }
+
+        uint DiscountedCost { get; }
+    }
+
+    public interface ICommerceGoldCard : ICommerceCard
+    {
+        uint GoldValue { get; }
     }
 
     public interface IGuildCard : IAgeCard

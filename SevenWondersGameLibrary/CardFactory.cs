@@ -47,6 +47,8 @@ namespace SevenWondersGameLibrary
             scienceCards.AddRange(GetScienceCards(Age.Two));
             scienceCards.AddRange(GetScienceCards(Age.Three));
             masterDictionary.Add(typeof(IScienceCard), scienceCards);
+
+            // Commerce cards
         }
 
         public IEnumerable<IAgeCard> PopulateAgeIICards()
@@ -212,7 +214,7 @@ namespace SevenWondersGameLibrary
                                                      "Loom",
                                                      string.Empty,
                                                      3,
-                                                     new ManufacturedMaterialResourceToken[] { ManufacturedMaterialResourceToken.GetUnitToken(ManufacturedMaterialType.Loom) },
+                                                     new ManufactoredMaterialResourceToken[] { ManufactoredMaterialResourceToken.GetUnitToken(ManufacturedMaterialType.Loom) },
                                                      0
                                                      ),
 
@@ -220,7 +222,7 @@ namespace SevenWondersGameLibrary
                                                      "Press",
                                                      string.Empty,
                                                      3,
-                                                     new ManufacturedMaterialResourceToken[] { ManufacturedMaterialResourceToken.GetUnitToken(ManufacturedMaterialType.Papyrus) },
+                                                     new ManufactoredMaterialResourceToken[] { ManufactoredMaterialResourceToken.GetUnitToken(ManufacturedMaterialType.Papyrus) },
                                                      0
                                                      ),
 
@@ -228,7 +230,7 @@ namespace SevenWondersGameLibrary
                                                      "Classworks",
                                                      string.Empty,
                                                      3,
-                                                     new ManufacturedMaterialResourceToken[] { ManufacturedMaterialResourceToken.GetUnitToken(ManufacturedMaterialType.Glass) },
+                                                     new ManufactoredMaterialResourceToken[] { ManufactoredMaterialResourceToken.GetUnitToken(ManufacturedMaterialType.Glass) },
                                                      0
                                                      ),
 
@@ -242,7 +244,7 @@ namespace SevenWondersGameLibrary
                                                      "Loom",
                                                      string.Empty,
                                                      6,
-                                                     new ManufacturedMaterialResourceToken[] { ManufacturedMaterialResourceToken.GetUnitToken(ManufacturedMaterialType.Loom) },
+                                                     new ManufactoredMaterialResourceToken[] { ManufactoredMaterialResourceToken.GetUnitToken(ManufacturedMaterialType.Loom) },
                                                      0
                                                      ),
 
@@ -250,7 +252,7 @@ namespace SevenWondersGameLibrary
                                                      "Press",
                                                      string.Empty,
                                                      6,
-                                                     new ManufacturedMaterialResourceToken[] { ManufacturedMaterialResourceToken.GetUnitToken(ManufacturedMaterialType.Papyrus) },
+                                                     new ManufactoredMaterialResourceToken[] { ManufactoredMaterialResourceToken.GetUnitToken(ManufacturedMaterialType.Papyrus) },
                                                      0
                                                      ),
 
@@ -258,7 +260,7 @@ namespace SevenWondersGameLibrary
                                                      "Classworks",
                                                      string.Empty,
                                                      6,
-                                                     new ManufacturedMaterialResourceToken[] { ManufacturedMaterialResourceToken.GetUnitToken(ManufacturedMaterialType.Glass) },
+                                                     new ManufactoredMaterialResourceToken[] { ManufactoredMaterialResourceToken.GetUnitToken(ManufacturedMaterialType.Glass) },
                                                      0
                                                      ),
 
@@ -517,6 +519,147 @@ namespace SevenWondersGameLibrary
                                             ScienceType.Gear,
                                             new ManufacturedMaterialResourceCost(1,0,0)
                                             ),
+                        };
+
+                case Age.Two:
+                    throw new NotImplementedException();
+
+                case Age.Three:
+                    throw new NotImplementedException();
+
+                default:
+                    throw new NotImplementedException();
+            }
+        }
+
+        private static IEnumerable<ICommerceCard> GetCommerceCards(Age age)
+        {
+            switch (age)
+            {
+                case Age.One:
+                    return new List<ICommerceCard>
+                        {
+                            // 3+ Players
+
+                            new CommerceManufactoredMaterialDiscountCard(Age.One,
+                                                                         "Marketplace",
+                                                                         string.Empty,
+                                                                         3,
+                                                                         1,
+                                                                         new ManufactoredMaterialResourceToken[] 
+                                                                         {
+                                                                             ManufactoredMaterialResourceToken.GetUnitToken(ManufacturedMaterialType.Glass),
+                                                                             ManufactoredMaterialResourceToken.GetUnitToken(ManufacturedMaterialType.Loom),
+                                                                             ManufactoredMaterialResourceToken.GetUnitToken(ManufacturedMaterialType.Papyrus)
+                                                                         },
+                                                                         ApplicableDirection.LeftAndRight
+                                                                         ),
+
+                            new CommerceRawMaterialDiscountCard(Age.One,
+                                                                "West Trading Post",
+                                                                string.Empty,
+                                                                3,
+                                                                1,
+                                                                new RawMaterialResourceToken[]
+                                                                {
+                                                                    RawMaterialResourceToken.GetUnitToken(RawMaterialType.Clay),
+                                                                    RawMaterialResourceToken.GetUnitToken(RawMaterialType.Ore),
+                                                                    RawMaterialResourceToken.GetUnitToken(RawMaterialType.Stone),
+                                                                    RawMaterialResourceToken.GetUnitToken(RawMaterialType.Wood)
+                                                                },
+                                                                ApplicableDirection.Left
+                                                                ),
+
+                            new CommerceRawMaterialDiscountCard(Age.One,
+                                                                "East Trading Post",
+                                                                string.Empty,
+                                                                3,
+                                                                1,
+                                                                new RawMaterialResourceToken[]
+                                                                {
+                                                                    RawMaterialResourceToken.GetUnitToken(RawMaterialType.Clay),
+                                                                    RawMaterialResourceToken.GetUnitToken(RawMaterialType.Ore),
+                                                                    RawMaterialResourceToken.GetUnitToken(RawMaterialType.Stone),
+                                                                    RawMaterialResourceToken.GetUnitToken(RawMaterialType.Wood)
+                                                                },
+                                                                ApplicableDirection.Right
+                                                                ),
+
+                            // 4+ Players
+
+                            new CommerceGoldCard(Age.One,
+                                                 "Tavern",
+                                                 string.Empty,
+                                                 4,
+                                                 5,
+                                                 ApplicableDirection.None
+                                                 ),
+
+                            // 5+ Players
+
+                            new CommerceGoldCard(Age.One,
+                                                 "Tavern",
+                                                 string.Empty,
+                                                 5,
+                                                 5,
+                                                 ApplicableDirection.None
+                                                 ),
+
+                            // 6+ Players
+
+                            new CommerceManufactoredMaterialDiscountCard(Age.One,
+                                                                         "Marketplace",
+                                                                         string.Empty,
+                                                                         6,
+                                                                         1,
+                                                                         new ManufactoredMaterialResourceToken[]
+                                                                         {
+                                                                             ManufactoredMaterialResourceToken.GetUnitToken(ManufacturedMaterialType.Glass),
+                                                                             ManufactoredMaterialResourceToken.GetUnitToken(ManufacturedMaterialType.Loom),
+                                                                             ManufactoredMaterialResourceToken.GetUnitToken(ManufacturedMaterialType.Papyrus)
+                                                                         },
+                                                                         ApplicableDirection.LeftAndRight
+                                                                         ),
+
+                            // 7+ Players
+
+                            new CommerceGoldCard(Age.One,
+                                                 "Tavern",
+                                                 string.Empty,
+                                                 7,
+                                                 5,
+                                                 ApplicableDirection.None
+                                                 ),
+
+                            new CommerceRawMaterialDiscountCard(Age.One,
+                                                                "West Trading Post",
+                                                                string.Empty,
+                                                                7,
+                                                                1,
+                                                                new RawMaterialResourceToken[]
+                                                                {
+                                                                    RawMaterialResourceToken.GetUnitToken(RawMaterialType.Clay),
+                                                                    RawMaterialResourceToken.GetUnitToken(RawMaterialType.Ore),
+                                                                    RawMaterialResourceToken.GetUnitToken(RawMaterialType.Stone),
+                                                                    RawMaterialResourceToken.GetUnitToken(RawMaterialType.Wood)
+                                                                },
+                                                                ApplicableDirection.Left
+                                                                ),
+
+                            new CommerceRawMaterialDiscountCard(Age.One,
+                                                                "East Trading Post",
+                                                                string.Empty,
+                                                                7,
+                                                                1,
+                                                                new RawMaterialResourceToken[]
+                                                                {
+                                                                    RawMaterialResourceToken.GetUnitToken(RawMaterialType.Clay),
+                                                                    RawMaterialResourceToken.GetUnitToken(RawMaterialType.Ore),
+                                                                    RawMaterialResourceToken.GetUnitToken(RawMaterialType.Stone),
+                                                                    RawMaterialResourceToken.GetUnitToken(RawMaterialType.Wood)
+                                                                },
+                                                                ApplicableDirection.Right
+                                                                ),
                         };
 
                 case Age.Two:
