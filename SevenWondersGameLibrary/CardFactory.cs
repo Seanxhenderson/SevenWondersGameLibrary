@@ -340,7 +340,9 @@ namespace SevenWondersGameLibrary
                                             3,
                                             3,
                                             new RawMaterialResourceCost(0,0,1,0),
-                                            ManufacturedMaterialResourceCost.Free
+                                            ManufacturedMaterialResourceCost.Free,
+                                            null,
+                                            new Guid[] { new Guid() }
                                             ),
 
                             // [Guid("5DBC3B9A-DAD1-42AF-87D7-FFA7543E28FF")]
@@ -351,7 +353,10 @@ namespace SevenWondersGameLibrary
                                             3,
                                             2,
                                             RawMaterialResourceCost.Free,
-                                            ManufacturedMaterialResourceCost.Free),
+                                            ManufacturedMaterialResourceCost.Free,
+                                            null,
+                                            new Guid[] { new Guid() }
+                                            ),
 
                             // [Guid("F0563D95-587C-4418-AF6F-16AC646BBFB1")]
                             new CultureCard(new Guid("F0563D95-587C-4418-AF6F-16AC646BBFB1"),
@@ -361,7 +366,10 @@ namespace SevenWondersGameLibrary
                                             3,
                                             2,
                                             RawMaterialResourceCost.Free,
-                                            ManufacturedMaterialResourceCost.Free),
+                                            ManufacturedMaterialResourceCost.Free,
+                                            null,
+                                            new Guid[] { new Guid() }
+                                            ),
 
                             // [Guid("D4B99FFD-010D-4F7D-8DD5-30552D67B1F9")]
                             new CultureCard(new Guid("D4B99FFD-010D-4F7D-8DD5-30552D67B1F9"),
@@ -371,7 +379,10 @@ namespace SevenWondersGameLibrary
                                             4,
                                             3,
                                             RawMaterialResourceCost.Free,
-                                            ManufacturedMaterialResourceCost.Free),
+                                            ManufacturedMaterialResourceCost.Free,
+                                            null,
+                                            null
+                                            ),
 
                             // 4+ Players
 
@@ -383,7 +394,10 @@ namespace SevenWondersGameLibrary
                                             4,
                                             2,
                                             RawMaterialResourceCost.Free,
-                                            ManufacturedMaterialResourceCost.Free),
+                                            ManufacturedMaterialResourceCost.Free,
+                                            null,
+                                            new Guid[] { new Guid() }
+                                            ),
 
                             // 5+ Players
 
@@ -397,7 +411,10 @@ namespace SevenWondersGameLibrary
                                             6,
                                             2,
                                             RawMaterialResourceCost.Free,
-                                            ManufacturedMaterialResourceCost.Free),
+                                            ManufacturedMaterialResourceCost.Free,
+                                            null,
+                                            new Guid[] { new Guid() }
+                                            ),
 
                             // 7+ Players
 
@@ -409,7 +426,10 @@ namespace SevenWondersGameLibrary
                                             7,
                                             3,
                                             new RawMaterialResourceCost(0,0,1,0),
-                                            ManufacturedMaterialResourceCost.Free),
+                                            ManufacturedMaterialResourceCost.Free,
+                                            null,
+                                            new Guid[] { new Guid() }
+                                            ),
 
                             // [Guid("6F748053-0777-4A9C-A84A-6192F0ADAD2A")]
                             new CultureCard(new Guid("6F748053-0777-4A9C-A84A-6192F0ADAD2A"),
@@ -419,7 +439,10 @@ namespace SevenWondersGameLibrary
                                             7,
                                             3,
                                             RawMaterialResourceCost.Free,
-                                            ManufacturedMaterialResourceCost.Free)
+                                            ManufacturedMaterialResourceCost.Free,
+                                            null,
+                                            null
+                                            )
                         };
 
                 case Age.Two:
@@ -450,7 +473,9 @@ namespace SevenWondersGameLibrary
                                              3,
                                              1,
                                              new RawMaterialResourceCost(1,0,0,0),
-                                             ManufacturedMaterialResourceCost.Free
+                                             ManufacturedMaterialResourceCost.Free,
+                                             null,
+                                             null
                                              ),
 
                             // [Guid("EBFCDF1D-6A68-410F-A460-D9DC992CD39E")]
@@ -461,7 +486,9 @@ namespace SevenWondersGameLibrary
                                              3,
                                              1,
                                              new RawMaterialResourceCost(0,0,0,1),
-                                             ManufacturedMaterialResourceCost.Free
+                                             ManufacturedMaterialResourceCost.Free,
+                                             null,
+                                             null
                                              ),
 
                             // [Guid("88B14BFD-13A6-4349-8CDC-0A609E64CF84")]
@@ -472,7 +499,9 @@ namespace SevenWondersGameLibrary
                                              3,
                                              1,
                                              new RawMaterialResourceCost(0,1,0,0),
-                                             ManufacturedMaterialResourceCost.Free
+                                             ManufacturedMaterialResourceCost.Free,
+                                             null,
+                                             null
                                              ),
 
                             // 4+ Players
@@ -485,7 +514,9 @@ namespace SevenWondersGameLibrary
                                              4,
                                              1,
                                              new RawMaterialResourceCost(1,0,0,0),
-                                             ManufacturedMaterialResourceCost.Free
+                                             ManufacturedMaterialResourceCost.Free,
+                                             null,
+                                             null
                                              ),
 
                             // 5+ Players
@@ -498,7 +529,9 @@ namespace SevenWondersGameLibrary
                                              5,
                                              1,
                                              new RawMaterialResourceCost(0,1,0,0),
-                                             ManufacturedMaterialResourceCost.Free
+                                             ManufacturedMaterialResourceCost.Free,
+                                             null,
+                                             null
                                              ),
 
                             // 6+ Players
@@ -513,7 +546,9 @@ namespace SevenWondersGameLibrary
                                              7,
                                              1,
                                              new RawMaterialResourceCost(0,0,0,1),
-                                             ManufacturedMaterialResourceCost.Free
+                                             ManufacturedMaterialResourceCost.Free,
+                                             null,
+                                             null
                                              )
                         };
 
@@ -544,7 +579,9 @@ namespace SevenWondersGameLibrary
                                             string.Empty,
                                             3,
                                             ScienceType.Tools,
-                                            new ManufacturedMaterialResourceCost(0,1,0)
+                                            new ManufacturedMaterialResourceCost(0,1,0),
+                                            null,
+                                            new Guid[] { new Guid(), new Guid() }
                                             ),
 
                             // [Guid("14888B0E-4461-44C5-BE68-537B92009254")]
@@ -554,7 +591,9 @@ namespace SevenWondersGameLibrary
                                             string.Empty,
                                             3,
                                             ScienceType.Glyph,
-                                            new ManufacturedMaterialResourceCost(0,0,1)
+                                            new ManufacturedMaterialResourceCost(0,0,1),
+                                            null,
+                                            new Guid[] { new Guid(), new Guid() }
                                             ),
 
                             // [Guid("75DAB02F-21B7-4C16-8EB3-760F2224E564")]
@@ -564,7 +603,9 @@ namespace SevenWondersGameLibrary
                                             string.Empty,
                                             3,
                                             ScienceType.Gear,
-                                            new ManufacturedMaterialResourceCost(1,0,0)
+                                            new ManufacturedMaterialResourceCost(1,0,0),
+                                            null,
+                                            new Guid[] { new Guid(), new Guid() }
                                             ),
 
                             // 4+ Players
@@ -576,7 +617,9 @@ namespace SevenWondersGameLibrary
                                             string.Empty,
                                             4,
                                             ScienceType.Glyph,
-                                            new ManufacturedMaterialResourceCost(0,0,1)
+                                            new ManufacturedMaterialResourceCost(0,0,1),
+                                            null,
+                                            new Guid[] { new Guid(), new Guid() }
                                             ),
 
                             // 5+ Players
@@ -588,7 +631,9 @@ namespace SevenWondersGameLibrary
                                             string.Empty,
                                             5,
                                             ScienceType.Tools,
-                                            new ManufacturedMaterialResourceCost(0,1,0)
+                                            new ManufacturedMaterialResourceCost(0,1,0),
+                                            null,
+                                            new Guid[] { new Guid(), new Guid() }
                                             ),
 
                             // 6+ Players
@@ -602,7 +647,9 @@ namespace SevenWondersGameLibrary
                                             string.Empty,
                                             7,
                                             ScienceType.Gear,
-                                            new ManufacturedMaterialResourceCost(1,0,0)
+                                            new ManufacturedMaterialResourceCost(1,0,0),
+                                            null,
+                                            new Guid[] { new Guid(), new Guid() }
                                             ),
                         };
 
@@ -626,6 +673,25 @@ namespace SevenWondersGameLibrary
                         {
                             // 3+ Players
 
+                            // [Guid("5AB7812B-AEBE-441D-AFD1-A8C980CD7C30")]
+                            new CommerceRawMaterialDiscountCard(new Guid("5AB7812B-AEBE-441D-AFD1-A8C980CD7C30"),
+                                                                Age.One,
+                                                                "East Trading Post",
+                                                                string.Empty,
+                                                                3,
+                                                                1,
+                                                                new RawMaterialResourceToken[]
+                                                                {
+                                                                    RawMaterialResourceToken.GetUnitToken(RawMaterialType.Clay),
+                                                                    RawMaterialResourceToken.GetUnitToken(RawMaterialType.Ore),
+                                                                    RawMaterialResourceToken.GetUnitToken(RawMaterialType.Stone),
+                                                                    RawMaterialResourceToken.GetUnitToken(RawMaterialType.Wood)
+                                                                },
+                                                                ApplicableDirection.Right,
+                                                                null,
+                                                                new Guid[] { new Guid() }
+                                                                ),
+
                             // [Guid("2AA1C698-1E66-4EB2-86A7-D9182CBB68EA")]
                             new CommerceManufactoredMaterialDiscountCard(new Guid("2AA1C698-1E66-4EB2-86A7-D9182CBB68EA"),
                                                                          Age.One,
@@ -639,7 +705,9 @@ namespace SevenWondersGameLibrary
                                                                              ManufactoredMaterialResourceToken.GetUnitToken(ManufacturedMaterialType.Loom),
                                                                              ManufactoredMaterialResourceToken.GetUnitToken(ManufacturedMaterialType.Papyrus)
                                                                          },
-                                                                         ApplicableDirection.LeftAndRight
+                                                                         ApplicableDirection.LeftAndRight,
+                                                                         null,
+                                                                         new Guid[] { new Guid() }
                                                                          ),
 
                             // [Guid("77CF63AC-9459-4A81-842F-4FF75BC2EC00")]
@@ -656,24 +724,9 @@ namespace SevenWondersGameLibrary
                                                                     RawMaterialResourceToken.GetUnitToken(RawMaterialType.Stone),
                                                                     RawMaterialResourceToken.GetUnitToken(RawMaterialType.Wood)
                                                                 },
-                                                                ApplicableDirection.Left
-                                                                ),
-
-                            // [Guid("5AB7812B-AEBE-441D-AFD1-A8C980CD7C30")]
-                            new CommerceRawMaterialDiscountCard(new Guid("5AB7812B-AEBE-441D-AFD1-A8C980CD7C30"),
-                                                                Age.One,
-                                                                "East Trading Post",
-                                                                string.Empty,
-                                                                3,
-                                                                1,
-                                                                new RawMaterialResourceToken[]
-                                                                {
-                                                                    RawMaterialResourceToken.GetUnitToken(RawMaterialType.Clay),
-                                                                    RawMaterialResourceToken.GetUnitToken(RawMaterialType.Ore),
-                                                                    RawMaterialResourceToken.GetUnitToken(RawMaterialType.Stone),
-                                                                    RawMaterialResourceToken.GetUnitToken(RawMaterialType.Wood)
-                                                                },
-                                                                ApplicableDirection.Right
+                                                                ApplicableDirection.Left,
+                                                                null,
+                                                                new Guid[] { new Guid() }
                                                                 ),
 
                             // 4+ Players
@@ -685,7 +738,9 @@ namespace SevenWondersGameLibrary
                                                  string.Empty,
                                                  4,
                                                  5,
-                                                 ApplicableDirection.None
+                                                 ApplicableDirection.None,
+                                                 null,
+                                                 null
                                                  ),
 
                             // 5+ Players
@@ -697,7 +752,9 @@ namespace SevenWondersGameLibrary
                                                  string.Empty,
                                                  5,
                                                  5,
-                                                 ApplicableDirection.None
+                                                 ApplicableDirection.None,
+                                                 null,
+                                                 null
                                                  ),
 
                             // 6+ Players
@@ -715,10 +772,31 @@ namespace SevenWondersGameLibrary
                                                                              ManufactoredMaterialResourceToken.GetUnitToken(ManufacturedMaterialType.Loom),
                                                                              ManufactoredMaterialResourceToken.GetUnitToken(ManufacturedMaterialType.Papyrus)
                                                                          },
-                                                                         ApplicableDirection.LeftAndRight
+                                                                         ApplicableDirection.LeftAndRight,
+                                                                         null,
+                                                                         new Guid[] { new Guid() }
                                                                          ),
 
                             // 7+ Players
+
+                            // [Guid("5C42BD03-B380-4BC2-A8C5-11AC6D4DF827")]
+                            new CommerceRawMaterialDiscountCard(new Guid("5C42BD03-B380-4BC2-A8C5-11AC6D4DF827"),
+                                                                Age.One,
+                                                                "East Trading Post",
+                                                                string.Empty,
+                                                                7,
+                                                                1,
+                                                                new RawMaterialResourceToken[]
+                                                                {
+                                                                    RawMaterialResourceToken.GetUnitToken(RawMaterialType.Clay),
+                                                                    RawMaterialResourceToken.GetUnitToken(RawMaterialType.Ore),
+                                                                    RawMaterialResourceToken.GetUnitToken(RawMaterialType.Stone),
+                                                                    RawMaterialResourceToken.GetUnitToken(RawMaterialType.Wood)
+                                                                },
+                                                                ApplicableDirection.Right,
+                                                                null,
+                                                                new Guid[] { new Guid() }
+                                                                ),
 
                             // [Guid("2B4EDF1F-27DB-4B66-8CE1-5699E1DB1CA5")]
                             new CommerceGoldCard(new Guid("2B4EDF1F-27DB-4B66-8CE1-5699E1DB1CA5"),
@@ -727,7 +805,9 @@ namespace SevenWondersGameLibrary
                                                  string.Empty,
                                                  7,
                                                  5,
-                                                 ApplicableDirection.None
+                                                 ApplicableDirection.None,
+                                                 null,
+                                                 null
                                                  ),
 
                             // [Guid("D336A613-7752-4666-B09B-A11D189E8FEC")] 
@@ -744,25 +824,11 @@ namespace SevenWondersGameLibrary
                                                                     RawMaterialResourceToken.GetUnitToken(RawMaterialType.Stone),
                                                                     RawMaterialResourceToken.GetUnitToken(RawMaterialType.Wood)
                                                                 },
-                                                                ApplicableDirection.Left
+                                                                ApplicableDirection.Left,
+                                                                null,
+                                                                new Guid[] { new Guid() }
                                                                 ),
-
-                            // [Guid("5C42BD03-B380-4BC2-A8C5-11AC6D4DF827")]
-                            new CommerceRawMaterialDiscountCard(new Guid("5C42BD03-B380-4BC2-A8C5-11AC6D4DF827"),
-                                                                Age.One,
-                                                                "East Trading Post",
-                                                                string.Empty,
-                                                                7,
-                                                                1,
-                                                                new RawMaterialResourceToken[]
-                                                                {
-                                                                    RawMaterialResourceToken.GetUnitToken(RawMaterialType.Clay),
-                                                                    RawMaterialResourceToken.GetUnitToken(RawMaterialType.Ore),
-                                                                    RawMaterialResourceToken.GetUnitToken(RawMaterialType.Stone),
-                                                                    RawMaterialResourceToken.GetUnitToken(RawMaterialType.Wood)
-                                                                },
-                                                                ApplicableDirection.Right
-                                                                ),
+             
                         };
 
                 case Age.Two:

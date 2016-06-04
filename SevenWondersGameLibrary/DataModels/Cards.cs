@@ -17,7 +17,9 @@ namespace SevenWondersGameLibrary.DataModels
             uint minimumNumberOfPlayers, 
             uint goldCost, 
             RawMaterialResourceCost rawMaterialResourceCost,
-            ManufacturedMaterialResourceCost manufacturedMaterialResourceCost)
+            ManufacturedMaterialResourceCost manufacturedMaterialResourceCost,
+            Guid? baseCardId,
+            IEnumerable<Guid> derivedCardIds)
         {
             this.Id = id;
             this.Age = age;
@@ -27,6 +29,8 @@ namespace SevenWondersGameLibrary.DataModels
             this.GoldCost = goldCost;
             this.RawMaterialResourceCost = rawMaterialResourceCost;
             this.ManufacturedMaterialResourceCost = manufacturedMaterialResourceCost;
+            this.BaseCardId = baseCardId;
+            this.DerivedCardIds = derivedCardIds;
         }
 
         public Guid Id
@@ -67,20 +71,16 @@ namespace SevenWondersGameLibrary.DataModels
             private set;
         }
 
-        public IAgeCard PreviousStageCard
+        public Guid? BaseCardId
         {
-            get
-            {
-                throw new NotImplementedException();
-            }
+            get;
+            protected set;
         }
 
-        public IEnumerable<IAgeCard> NextStageCards
+        public IEnumerable<Guid> DerivedCardIds
         {
-            get
-            {
-                throw new NotImplementedException();
-            }
+            get;
+            protected set;
         }
 
         public RawMaterialResourceCost RawMaterialResourceCost
@@ -112,7 +112,7 @@ namespace SevenWondersGameLibrary.DataModels
             uint minimumNumberOfPlayers,
             IEnumerable<RawMaterialResourceToken> resources,
             uint goldCost)
-            : base(id, age, title, description, minimumNumberOfPlayers, goldCost, RawMaterialResourceCost.Free, ManufacturedMaterialResourceCost.Free)
+            : base(id, age, title, description, minimumNumberOfPlayers, goldCost, RawMaterialResourceCost.Free, ManufacturedMaterialResourceCost.Free, null, null)
         {
             this.Resources = resources;
         }
@@ -134,7 +134,7 @@ namespace SevenWondersGameLibrary.DataModels
             uint minimumNumberOfPlayers,
             IEnumerable<ManufactoredMaterialResourceToken> resources,
             uint goldCost)
-            : base(id, age, title, description, minimumNumberOfPlayers, goldCost, RawMaterialResourceCost.Free, ManufacturedMaterialResourceCost.Free)
+            : base(id, age, title, description, minimumNumberOfPlayers, goldCost, RawMaterialResourceCost.Free, ManufacturedMaterialResourceCost.Free, null, null)
         {
             this.Resources = resources;
         }
@@ -156,8 +156,10 @@ namespace SevenWondersGameLibrary.DataModels
             uint minimumNumberOfPlayers, 
             uint victoryValue,
             RawMaterialResourceCost rawMaterialResourceCost,
-            ManufacturedMaterialResourceCost manufacturedMaterialResourceCost)
-            : base(id, age, title, description, minimumNumberOfPlayers, 0, rawMaterialResourceCost, manufacturedMaterialResourceCost)
+            ManufacturedMaterialResourceCost manufacturedMaterialResourceCost,
+            Guid? baseCardId,
+            IEnumerable<Guid> derivedCardIds)
+            : base(id, age, title, description, minimumNumberOfPlayers, 0, rawMaterialResourceCost, manufacturedMaterialResourceCost, baseCardId, derivedCardIds)
         {
             this.VictoryValue = victoryValue;
         }
@@ -179,8 +181,10 @@ namespace SevenWondersGameLibrary.DataModels
             uint minimumNumberOfPlayers,
             uint militaryValue,
             RawMaterialResourceCost rawMaterialResourceCost,
-            ManufacturedMaterialResourceCost manufacturedMaterialResourceCost)
-            : base(id, age, title, description, minimumNumberOfPlayers, 0, rawMaterialResourceCost, manufacturedMaterialResourceCost)
+            ManufacturedMaterialResourceCost manufacturedMaterialResourceCost,
+            Guid? baseCardId,
+            IEnumerable<Guid> derivedCardIds)
+            : base(id, age, title, description, minimumNumberOfPlayers, 0, rawMaterialResourceCost, manufacturedMaterialResourceCost, baseCardId, derivedCardIds)
         {
             this.MilitaryValue = militaryValue;
         }
@@ -201,8 +205,10 @@ namespace SevenWondersGameLibrary.DataModels
             string description,
             uint minimumNumberOfPlayers,
             ScienceType scienceType,
-            ManufacturedMaterialResourceCost manufacturedMaterialResourceCost)
-            : base(id, age, title, description, minimumNumberOfPlayers, 0, RawMaterialResourceCost.Free, manufacturedMaterialResourceCost)
+            ManufacturedMaterialResourceCost manufacturedMaterialResourceCost,
+            Guid? baseCardId,
+            IEnumerable<Guid> derivedCardIds)
+            : base(id, age, title, description, minimumNumberOfPlayers, 0, RawMaterialResourceCost.Free, manufacturedMaterialResourceCost, baseCardId, derivedCardIds)
         {
             this.ScienceType = scienceType;
         }
@@ -222,8 +228,10 @@ namespace SevenWondersGameLibrary.DataModels
             string title,
             string description,
             uint minimumNumberOfPlayers,
-            ApplicableDirection usabilityDirection)
-            : base(id, age, title, description, minimumNumberOfPlayers, 0, RawMaterialResourceCost.Free, ManufacturedMaterialResourceCost.Free)
+            ApplicableDirection usabilityDirection,
+            Guid? baseCardId,
+            IEnumerable<Guid> derivedCardIds)
+            : base(id, age, title, description, minimumNumberOfPlayers, 0, RawMaterialResourceCost.Free, ManufacturedMaterialResourceCost.Free, baseCardId, derivedCardIds)
         {
             this.UsabilityDirection = usabilityDirection;
         }
@@ -245,8 +253,10 @@ namespace SevenWondersGameLibrary.DataModels
             uint minimumNumberOfPlayers,
             uint discountValue,
             IEnumerable<RawMaterialResourceToken> rawMaterialTokens,
-            ApplicableDirection usabilityDirection)
-            : base(id, age, title, description, minimumNumberOfPlayers, usabilityDirection)
+            ApplicableDirection usabilityDirection,
+            Guid? baseCardId,
+            IEnumerable<Guid> derivedCardIds)
+            : base(id, age, title, description, minimumNumberOfPlayers, usabilityDirection, baseCardId, derivedCardIds)
         {
             this.DiscountedCost = discountValue;
             this.RawMaterialTokens = rawMaterialTokens;
@@ -275,8 +285,10 @@ namespace SevenWondersGameLibrary.DataModels
             uint minimumNumberOfPlayers,
             uint discountValue,
             IEnumerable<ManufactoredMaterialResourceToken> manufactoredMaterialTokens,
-            ApplicableDirection usabilityDirection)
-            : base(id, age, title, description, minimumNumberOfPlayers, usabilityDirection)
+            ApplicableDirection usabilityDirection,
+            Guid? baseCardId,
+            IEnumerable<Guid> derivedCardIds)
+            : base(id, age, title, description, minimumNumberOfPlayers, usabilityDirection, baseCardId, derivedCardIds)
         {
             this.DiscountedCost = discountValue;
             this.ManufactoredMaterialTokens = manufactoredMaterialTokens;
@@ -304,8 +316,10 @@ namespace SevenWondersGameLibrary.DataModels
             string description,
             uint minimumNumberOfPlayers,
             uint goldValue,
-            ApplicableDirection usabilityDirection)
-            : base(id, age, title, description, minimumNumberOfPlayers, usabilityDirection)
+            ApplicableDirection usabilityDirection,
+            Guid? baseCardId,
+            IEnumerable<Guid> derivedCardIds)
+            : base(id, age, title, description, minimumNumberOfPlayers, usabilityDirection, baseCardId, derivedCardIds)
         {
             this.GoldValue = goldValue;
         }

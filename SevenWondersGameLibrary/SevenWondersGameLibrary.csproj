@@ -111,10 +111,15 @@
     <Compile Include="DataModels\CardIds.cs" />
     <Compile Include="DataModels\Cards.cs" />
     <Compile Include="DataModels\ICards.cs" />
+    <Compile Include="DataModels\IWonderBoards.cs" />
     <Compile Include="DataModels\Resources.cs" />
     <Compile Include="DataModels\TypeEnums.cs" />
+    <Compile Include="DataModels\WonderBoards.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Properties\SevenWondersGameLibrary.rd.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Execution\" />
   </ItemGroup>
   <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '14.0' ">
     <VisualStudioVersion>14.0</VisualStudioVersion>

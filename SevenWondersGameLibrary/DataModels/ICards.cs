@@ -28,9 +28,9 @@ namespace SevenWondersGameLibrary.DataModels
 
         uint GoldCost { get; }
 
-        IAgeCard PreviousStageCard { get; }
+        Guid? BaseCardId { get; }
 
-        IEnumerable<IAgeCard> NextStageCards { get; }
+        IEnumerable<Guid> DerivedCardIds { get; }
 
         uint MinimumNumberOfPlayers { get; }
     }
