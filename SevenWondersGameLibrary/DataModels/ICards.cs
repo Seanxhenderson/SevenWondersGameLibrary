@@ -16,6 +16,8 @@ namespace SevenWondersGameLibrary.DataModels
         string Description { get; }
 
         string ImageUrl { get; }
+
+        CardState CurrentState { get; set; }
     }
 
     public interface IAgeCard : ICard

@@ -116,6 +116,7 @@
     <Compile Include="DataModels\TypeEnums.cs" />
     <Compile Include="DataModels\WonderBoards.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="WonderBoardFactory.cs" />
     <EmbeddedResource Include="Properties\SevenWondersGameLibrary.rd.xml" />
   </ItemGroup>
   <ItemGroup>

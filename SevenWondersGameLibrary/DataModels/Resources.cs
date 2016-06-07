@@ -43,22 +43,40 @@ namespace SevenWondersGameLibrary.DataModels
 
     public class ManufactoredMaterialResourceToken : ResourceToken
     {
-        public ManufactoredMaterialResourceToken(ManufacturedMaterialType type, uint tokenValue)
+        public ManufactoredMaterialResourceToken(ManufactoredMaterialType type, uint tokenValue)
             : base(tokenValue)
         {
             this.Type = type;
         }
 
-        public ManufacturedMaterialType Type { get; private set; }
+        public ManufactoredMaterialType Type { get; private set; }
 
-        public static ManufactoredMaterialResourceToken GetUnitToken(ManufacturedMaterialType type)
+        public static ManufactoredMaterialResourceToken GetUnitToken(ManufactoredMaterialType type)
         {
             return new ManufactoredMaterialResourceToken(type, 1);
         }
 
-        public static ManufactoredMaterialResourceToken GetDoubleToken(ManufacturedMaterialType type)
+        public static ManufactoredMaterialResourceToken GetDoubleToken(ManufactoredMaterialType type)
         {
             return new ManufactoredMaterialResourceToken(type, 2);
+        }
+    }
+
+    public class GoldResourceToken : ResourceToken
+    {
+        public GoldResourceToken(uint tokenValue)
+            : base(tokenValue)
+        {
+        }
+
+        public static GoldResourceToken GetUnitToken()
+        {
+            return new GoldResourceToken(1);
+        }
+
+        public static GoldResourceToken GetDoubleToken()
+        {
+            return new GoldResourceToken(2);
         }
     }
 
@@ -125,9 +143,9 @@ namespace SevenWondersGameLibrary.DataModels
         {
             this.resourceTokens = new List<ManufactoredMaterialResourceToken>
             {
-                new ManufactoredMaterialResourceToken(ManufacturedMaterialType.Glass, glassCost),
-                new ManufactoredMaterialResourceToken(ManufacturedMaterialType.Loom, loomCost),
-                new ManufactoredMaterialResourceToken(ManufacturedMaterialType.Papyrus, papyrusCost)
+                new ManufactoredMaterialResourceToken(ManufactoredMaterialType.Glass, glassCost),
+                new ManufactoredMaterialResourceToken(ManufactoredMaterialType.Loom, loomCost),
+                new ManufactoredMaterialResourceToken(ManufactoredMaterialType.Papyrus, papyrusCost)
             };
         }
 

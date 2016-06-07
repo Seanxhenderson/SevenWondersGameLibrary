@@ -31,6 +31,7 @@ namespace SevenWondersGameLibrary.DataModels
             this.ManufacturedMaterialResourceCost = manufacturedMaterialResourceCost;
             this.BaseCardId = baseCardId;
             this.DerivedCardIds = derivedCardIds;
+            this.CurrentState = CardState.NotAvailable;
         }
 
         public Guid Id
@@ -99,6 +100,12 @@ namespace SevenWondersGameLibrary.DataModels
         {
             get;
             private set;
+        }
+
+        public CardState CurrentState
+        {
+            get;
+            set;
         }
     }
 

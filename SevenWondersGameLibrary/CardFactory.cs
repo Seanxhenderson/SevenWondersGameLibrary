@@ -7,12 +7,12 @@ using System.Threading.Tasks;
 
 namespace SevenWondersGameLibrary
 {
-    public class CardFactory
+    public static class CardFactory
     {
-        private Dictionary<Type, IEnumerable<object>> masterDictionary = new Dictionary<Type, IEnumerable<object>>();
-
-        public void PopulateAgeICards()
+        public static Dictionary<Type, IEnumerable<object>> PopulateAgeICards()
         {
+            Dictionary<Type, IEnumerable<object>> masterDictionary = new Dictionary<Type, IEnumerable<object>>();
+
             // RawMaterial cards
             var rawMaterialCards = new List<IRawMaterialCard>();
             rawMaterialCards.AddRange(GetRawMaterialCards(Age.One));
@@ -54,14 +54,16 @@ namespace SevenWondersGameLibrary
             commerceCards.AddRange(GetCommerceCards(Age.Two));
             commerceCards.AddRange(GetCommerceCards(Age.Three));
             masterDictionary.Add(typeof(ICommerceCard), commerceCards);
+
+            return masterDictionary;
         }
 
-        public IEnumerable<IAgeCard> PopulateAgeIICards()
+        public static Dictionary<Type, IEnumerable<object>> PopulateAgeIICards()
         {
             throw new NotImplementedException();
         }
 
-        public IEnumerable<IAgeCard> PopulateAgeIIICards()
+        public static Dictionary<Type, IEnumerable<object>> PopulateAgeIIICards()
         {
             throw new NotImplementedException();
         }
@@ -249,7 +251,7 @@ namespace SevenWondersGameLibrary
                                                      "Loom",
                                                      string.Empty,
                                                      3,
-                                                     new ManufactoredMaterialResourceToken[] { ManufactoredMaterialResourceToken.GetUnitToken(ManufacturedMaterialType.Loom) },
+                                                     new ManufactoredMaterialResourceToken[] { ManufactoredMaterialResourceToken.GetUnitToken(ManufactoredMaterialType.Loom) },
                                                      0
                                                      ),
 
@@ -259,7 +261,7 @@ namespace SevenWondersGameLibrary
                                                      "Press",
                                                      string.Empty,
                                                      3,
-                                                     new ManufactoredMaterialResourceToken[] { ManufactoredMaterialResourceToken.GetUnitToken(ManufacturedMaterialType.Papyrus) },
+                                                     new ManufactoredMaterialResourceToken[] { ManufactoredMaterialResourceToken.GetUnitToken(ManufactoredMaterialType.Papyrus) },
                                                      0
                                                      ),
 
@@ -269,7 +271,7 @@ namespace SevenWondersGameLibrary
                                                      "Classworks",
                                                      string.Empty,
                                                      3,
-                                                     new ManufactoredMaterialResourceToken[] { ManufactoredMaterialResourceToken.GetUnitToken(ManufacturedMaterialType.Glass) },
+                                                     new ManufactoredMaterialResourceToken[] { ManufactoredMaterialResourceToken.GetUnitToken(ManufactoredMaterialType.Glass) },
                                                      0
                                                      ),
 
@@ -285,7 +287,7 @@ namespace SevenWondersGameLibrary
                                                      "Loom",
                                                      string.Empty,
                                                      6,
-                                                     new ManufactoredMaterialResourceToken[] { ManufactoredMaterialResourceToken.GetUnitToken(ManufacturedMaterialType.Loom) },
+                                                     new ManufactoredMaterialResourceToken[] { ManufactoredMaterialResourceToken.GetUnitToken(ManufactoredMaterialType.Loom) },
                                                      0
                                                      ),
 
@@ -295,7 +297,7 @@ namespace SevenWondersGameLibrary
                                                      "Press",
                                                      string.Empty,
                                                      6,
-                                                     new ManufactoredMaterialResourceToken[] { ManufactoredMaterialResourceToken.GetUnitToken(ManufacturedMaterialType.Papyrus) },
+                                                     new ManufactoredMaterialResourceToken[] { ManufactoredMaterialResourceToken.GetUnitToken(ManufactoredMaterialType.Papyrus) },
                                                      0
                                                      ),
 
@@ -305,7 +307,7 @@ namespace SevenWondersGameLibrary
                                                      "Classworks",
                                                      string.Empty,
                                                      6,
-                                                     new ManufactoredMaterialResourceToken[] { ManufactoredMaterialResourceToken.GetUnitToken(ManufacturedMaterialType.Glass) },
+                                                     new ManufactoredMaterialResourceToken[] { ManufactoredMaterialResourceToken.GetUnitToken(ManufactoredMaterialType.Glass) },
                                                      0
                                                      ),
 
@@ -701,9 +703,9 @@ namespace SevenWondersGameLibrary
                                                                          1,
                                                                          new ManufactoredMaterialResourceToken[]
                                                                          {
-                                                                             ManufactoredMaterialResourceToken.GetUnitToken(ManufacturedMaterialType.Glass),
-                                                                             ManufactoredMaterialResourceToken.GetUnitToken(ManufacturedMaterialType.Loom),
-                                                                             ManufactoredMaterialResourceToken.GetUnitToken(ManufacturedMaterialType.Papyrus)
+                                                                             ManufactoredMaterialResourceToken.GetUnitToken(ManufactoredMaterialType.Glass),
+                                                                             ManufactoredMaterialResourceToken.GetUnitToken(ManufactoredMaterialType.Loom),
+                                                                             ManufactoredMaterialResourceToken.GetUnitToken(ManufactoredMaterialType.Papyrus)
                                                                          },
                                                                          ApplicableDirection.LeftAndRight,
                                                                          null,
@@ -768,9 +770,9 @@ namespace SevenWondersGameLibrary
                                                                          1,
                                                                          new ManufactoredMaterialResourceToken[]
                                                                          {
-                                                                             ManufactoredMaterialResourceToken.GetUnitToken(ManufacturedMaterialType.Glass),
-                                                                             ManufactoredMaterialResourceToken.GetUnitToken(ManufacturedMaterialType.Loom),
-                                                                             ManufactoredMaterialResourceToken.GetUnitToken(ManufacturedMaterialType.Papyrus)
+                                                                             ManufactoredMaterialResourceToken.GetUnitToken(ManufactoredMaterialType.Glass),
+                                                                             ManufactoredMaterialResourceToken.GetUnitToken(ManufactoredMaterialType.Loom),
+                                                                             ManufactoredMaterialResourceToken.GetUnitToken(ManufactoredMaterialType.Papyrus)
                                                                          },
                                                                          ApplicableDirection.LeftAndRight,
                                                                          null,
