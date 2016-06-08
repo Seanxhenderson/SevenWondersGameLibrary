@@ -18,7 +18,7 @@ namespace SevenWondersGameLibrary.DataModels
             uint goldCost, 
             RawMaterialResourceCost rawMaterialResourceCost,
             ManufacturedMaterialResourceCost manufacturedMaterialResourceCost,
-            Guid? baseCardId,
+            IEnumerable<Guid> baseCardId,
             IEnumerable<Guid> derivedCardIds)
         {
             this.Id = id;
@@ -72,7 +72,7 @@ namespace SevenWondersGameLibrary.DataModels
             private set;
         }
 
-        public Guid? BaseCardId
+        public IEnumerable<Guid> BaseCardId
         {
             get;
             protected set;
@@ -164,7 +164,7 @@ namespace SevenWondersGameLibrary.DataModels
             uint victoryValue,
             RawMaterialResourceCost rawMaterialResourceCost,
             ManufacturedMaterialResourceCost manufacturedMaterialResourceCost,
-            Guid? baseCardId,
+            IEnumerable<Guid> baseCardId,
             IEnumerable<Guid> derivedCardIds)
             : base(id, age, title, description, minimumNumberOfPlayers, 0, rawMaterialResourceCost, manufacturedMaterialResourceCost, baseCardId, derivedCardIds)
         {
@@ -189,7 +189,7 @@ namespace SevenWondersGameLibrary.DataModels
             uint militaryValue,
             RawMaterialResourceCost rawMaterialResourceCost,
             ManufacturedMaterialResourceCost manufacturedMaterialResourceCost,
-            Guid? baseCardId,
+            IEnumerable<Guid> baseCardId,
             IEnumerable<Guid> derivedCardIds)
             : base(id, age, title, description, minimumNumberOfPlayers, 0, rawMaterialResourceCost, manufacturedMaterialResourceCost, baseCardId, derivedCardIds)
         {
@@ -213,7 +213,7 @@ namespace SevenWondersGameLibrary.DataModels
             uint minimumNumberOfPlayers,
             ScienceType scienceType,
             ManufacturedMaterialResourceCost manufacturedMaterialResourceCost,
-            Guid? baseCardId,
+            IEnumerable<Guid> baseCardId,
             IEnumerable<Guid> derivedCardIds)
             : base(id, age, title, description, minimumNumberOfPlayers, 0, RawMaterialResourceCost.Free, manufacturedMaterialResourceCost, baseCardId, derivedCardIds)
         {
@@ -236,7 +236,7 @@ namespace SevenWondersGameLibrary.DataModels
             string description,
             uint minimumNumberOfPlayers,
             ApplicableDirection usabilityDirection,
-            Guid? baseCardId,
+            IEnumerable<Guid> baseCardId,
             IEnumerable<Guid> derivedCardIds)
             : base(id, age, title, description, minimumNumberOfPlayers, 0, RawMaterialResourceCost.Free, ManufacturedMaterialResourceCost.Free, baseCardId, derivedCardIds)
         {
@@ -261,7 +261,7 @@ namespace SevenWondersGameLibrary.DataModels
             uint discountValue,
             IEnumerable<RawMaterialResourceToken> rawMaterialTokens,
             ApplicableDirection usabilityDirection,
-            Guid? baseCardId,
+            IEnumerable<Guid> baseCardId,
             IEnumerable<Guid> derivedCardIds)
             : base(id, age, title, description, minimumNumberOfPlayers, usabilityDirection, baseCardId, derivedCardIds)
         {
@@ -293,7 +293,7 @@ namespace SevenWondersGameLibrary.DataModels
             uint discountValue,
             IEnumerable<ManufactoredMaterialResourceToken> manufactoredMaterialTokens,
             ApplicableDirection usabilityDirection,
-            Guid? baseCardId,
+            IEnumerable<Guid> baseCardId,
             IEnumerable<Guid> derivedCardIds)
             : base(id, age, title, description, minimumNumberOfPlayers, usabilityDirection, baseCardId, derivedCardIds)
         {
@@ -324,7 +324,7 @@ namespace SevenWondersGameLibrary.DataModels
             uint minimumNumberOfPlayers,
             uint goldValue,
             ApplicableDirection usabilityDirection,
-            Guid? baseCardId,
+            IEnumerable<Guid> baseCardId,
             IEnumerable<Guid> derivedCardIds)
             : base(id, age, title, description, minimumNumberOfPlayers, usabilityDirection, baseCardId, derivedCardIds)
         {

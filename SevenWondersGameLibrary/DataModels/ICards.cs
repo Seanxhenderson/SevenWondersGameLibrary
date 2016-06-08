@@ -30,7 +30,7 @@ namespace SevenWondersGameLibrary.DataModels
 
         uint GoldCost { get; }
 
-        Guid? BaseCardId { get; }
+        IEnumerable<Guid> BaseCardId { get; }
 
         IEnumerable<Guid> DerivedCardIds { get; }
 

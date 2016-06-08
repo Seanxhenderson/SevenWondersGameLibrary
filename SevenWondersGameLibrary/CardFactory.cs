@@ -222,13 +222,136 @@ namespace SevenWondersGameLibrary
                                                 new RawMaterialResourceToken[] { RawMaterialResourceToken.GetUnitToken(RawMaterialType.Wood | RawMaterialType.Clay) },
                                                 1
                                                 ),
+                        
                             // 7+ Players
                         };
 
                 case Age.Two:
-                    throw new NotImplementedException();
+
+                    return new List<IRawMaterialCard>
+                        {
+                            // 3+ Players
+
+                            // [Guid("DF5D7F5E-84E2-472E-81E5-F756834B5509")]
+                            new RawMaterialCard(new Guid("DF5D7F5E-84E2-472E-81E5-F756834B5509"),
+                                                Age.Two,
+                                                "Brickyard",
+                                                string.Empty,
+                                                3,
+                                                new RawMaterialResourceToken[] {
+                                                    RawMaterialResourceToken.GetUnitToken(RawMaterialType.Clay),
+                                                    RawMaterialResourceToken.GetUnitToken(RawMaterialType.Clay) },
+                                                1
+                                                ),
+
+                            // [Guid("1951DC1D-38B9-41E2-AFC7-87EEDB47DF67")]
+                            new RawMaterialCard(new Guid("1951DC1D-38B9-41E2-AFC7-87EEDB47DF67"),
+                                                Age.Two,
+                                                "Foundry",
+                                                string.Empty,
+                                                3,
+                                                new RawMaterialResourceToken[] {
+                                                    RawMaterialResourceToken.GetUnitToken(RawMaterialType.Ore),
+                                                    RawMaterialResourceToken.GetUnitToken(RawMaterialType.Ore) },
+                                                1
+                                                ),
+
+                            // [Guid("75E1136B-8C00-4E19-8336-1FABB812928B")]
+                            new RawMaterialCard(new Guid("75E1136B-8C00-4E19-8336-1FABB812928B"),
+                                                Age.Two,
+                                                "Quarry",
+                                                string.Empty,
+                                                3,
+                                                new RawMaterialResourceToken[] {
+                                                    RawMaterialResourceToken.GetUnitToken(RawMaterialType.Stone),
+                                                    RawMaterialResourceToken.GetUnitToken(RawMaterialType.Stone) },
+                                                1
+                                                ),
+
+                            // [Guid("E97A76FE-F10B-4999-A2CE-85CDAD6B8080")]
+                            new RawMaterialCard(new Guid("E97A76FE-F10B-4999-A2CE-85CDAD6B8080"),
+                                                Age.Two,
+                                                "Sawmill",
+                                                string.Empty,
+                                                3,
+                                                new RawMaterialResourceToken[] {
+                                                    RawMaterialResourceToken.GetUnitToken(RawMaterialType.Wood),  
+                                                    RawMaterialResourceToken.GetUnitToken(RawMaterialType.Wood) },
+                                                1
+                                                ),
+
+                            // 4+ Players
+
+                            // [Guid("17B8E3BD-22F3-46D2-90D0-7F3543C35260")]
+                            new RawMaterialCard(new Guid("17B8E3BD-22F3-46D2-90D0-7F3543C35260"),
+                                                Age.Two,
+                                                "Brickyard",
+                                                string.Empty,
+                                                4,
+                                                new RawMaterialResourceToken[] {
+                                                    RawMaterialResourceToken.GetUnitToken(RawMaterialType.Clay),
+                                                    RawMaterialResourceToken.GetUnitToken(RawMaterialType.Clay) },
+                                                1
+                                                ),
+
+                            // [Guid("FCF68028-FF22-48FD-B062-0DE01E028D54")]
+                            new RawMaterialCard(new Guid("FCF68028-FF22-48FD-B062-0DE01E028D54"),
+                                                Age.Two,
+                                                "Foundry",
+                                                string.Empty,
+                                                4,
+                                                new RawMaterialResourceToken[] {
+                                                    RawMaterialResourceToken.GetUnitToken(RawMaterialType.Ore),
+                                                    RawMaterialResourceToken.GetUnitToken(RawMaterialType.Ore) },
+                                                1
+                                                ),
+
+                            // [Guid("54748C79-33FF-4A78-9667-1B86BD7E7B12")]
+                            new RawMaterialCard(new Guid("54748C79-33FF-4A78-9667-1B86BD7E7B12"),
+                                                Age.Two,
+                                                "Quarry",
+                                                string.Empty,
+                                                4,
+                                                new RawMaterialResourceToken[] {
+                                                    RawMaterialResourceToken.GetUnitToken(RawMaterialType.Stone),
+                                                    RawMaterialResourceToken.GetUnitToken(RawMaterialType.Stone) },
+                                                1
+                                                ),
+
+                            // [Guid("C462B76D-A1EC-4507-B412-BF60347F39B1")]
+                            new RawMaterialCard(new Guid("C462B76D-A1EC-4507-B412-BF60347F39B1"),
+                                                Age.Two,
+                                                "Sawmill",
+                                                string.Empty,
+                                                4,
+                                                new RawMaterialResourceToken[] {
+                                                    RawMaterialResourceToken.GetUnitToken(RawMaterialType.Wood),
+                                                    RawMaterialResourceToken.GetUnitToken(RawMaterialType.Wood) },
+                                                1
+                                                )
+
+                            // 5+ Players
+
+                            // 6+ Players
+
+                            // 7+ Players
+
+                        };
+
+                        
 
                 case Age.Three:
+
+                        // 3+ Players
+
+                        // 4+ Players
+
+                        // 5+ Players
+
+                        // 6+ Players
+
+                        // 7+ Players
+
                     throw new NotImplementedException();
 
                 default:
@@ -268,7 +391,7 @@ namespace SevenWondersGameLibrary
                             // [Guid("54F7A0D8-A5FC-45F4-9E88-E885E44CCBC1")]
                             new ManufacturedGoodCard(new Guid("54F7A0D8-A5FC-45F4-9E88-E885E44CCBC1"),
                                                      Age.One,
-                                                     "Classworks",
+                                                     "Glassworks",
                                                      string.Empty,
                                                      3,
                                                      new ManufactoredMaterialResourceToken[] { ManufactoredMaterialResourceToken.GetUnitToken(ManufactoredMaterialType.Glass) },
@@ -304,7 +427,7 @@ namespace SevenWondersGameLibrary
                             // [Guid("C2EDCFA8-3892-4488-922C-DD1F5AF55432")]
                             new ManufacturedGoodCard(new Guid("C2EDCFA8-3892-4488-922C-DD1F5AF55432"),
                                                      Age.One,
-                                                     "Classworks",
+                                                     "Glassworks",
                                                      string.Empty,
                                                      6,
                                                      new ManufactoredMaterialResourceToken[] { ManufactoredMaterialResourceToken.GetUnitToken(ManufactoredMaterialType.Glass) },
@@ -315,10 +438,90 @@ namespace SevenWondersGameLibrary
                         };
 
                 case Age.Two:
-                    throw new NotImplementedException();
+                    return new List<IManufacturedMaterialCard>
+                        {
+                            // 3+ Players
+
+                            // [Guid("AFD1B3CF-5921-4D69-969E-ED2EC4C16AA4")]
+                            new ManufacturedGoodCard(new Guid("AFD1B3CF-5921-4D69-969E-ED2EC4C16AA4"),
+                                                     Age.Two,
+                                                     "Loom",
+                                                     string.Empty,
+                                                     3,
+                                                     new ManufactoredMaterialResourceToken[] { ManufactoredMaterialResourceToken.GetUnitToken(ManufactoredMaterialType.Loom) },
+                                                     0
+                                                     ),
+
+                            // [Guid("B13346D8-D762-4B7F-AEA3-3A0E57448FA5")]
+                            new ManufacturedGoodCard(new Guid("B13346D8-D762-4B7F-AEA3-3A0E57448FA5"),
+                                                     Age.Two,
+                                                     "Glassworks",
+                                                     string.Empty,
+                                                     3,
+                                                     new ManufactoredMaterialResourceToken[] { ManufactoredMaterialResourceToken.GetUnitToken(ManufactoredMaterialType.Glass) },
+                                                     0
+                                                     ),
+
+                            // [Guid("76CFAC99-D7B6-4293-AFA0-FA93D1391B77")]
+                            new ManufacturedGoodCard(new Guid("76CFAC99-D7B6-4293-AFA0-FA93D1391B77"),
+                                                     Age.Two,
+                                                     "Press",
+                                                     string.Empty,
+                                                     3,
+                                                     new ManufactoredMaterialResourceToken[] { ManufactoredMaterialResourceToken.GetUnitToken(ManufactoredMaterialType.Papyrus) },
+                                                     0
+                                                     ),
+
+                            // 4+ Players
+
+                            // 5+ Players
+
+                            // [Guid("2CC2E7E9-0300-4A02-9C17-0FBBF77EFD4C")]
+                            new ManufacturedGoodCard(new Guid("2CC2E7E9-0300-4A02-9C17-0FBBF77EFD4C"),
+                                                     Age.Two,
+                                                     "Loom",
+                                                     string.Empty,
+                                                     5,
+                                                     new ManufactoredMaterialResourceToken[] { ManufactoredMaterialResourceToken.GetUnitToken(ManufactoredMaterialType.Loom) },
+                                                     0
+                                                     ),
+
+                            // [Guid("AB82D078-CB56-43A2-801B-F1C386431517")]
+                            new ManufacturedGoodCard(new Guid("AB82D078-CB56-43A2-801B-F1C386431517"),
+                                                     Age.Two,
+                                                     "Glassworks",
+                                                     string.Empty,
+                                                     5,
+                                                     new ManufactoredMaterialResourceToken[] { ManufactoredMaterialResourceToken.GetUnitToken(ManufactoredMaterialType.Glass) },
+                                                     0
+                                                     ),
+
+                            // [Guid("396AE8C5-1DFC-44B9-8E65-17081CC3F2BA")]
+                            new ManufacturedGoodCard(new Guid("396AE8C5-1DFC-44B9-8E65-17081CC3F2BA"),
+                                                     Age.Two,
+                                                     "Press",
+                                                     string.Empty,
+                                                     5,
+                                                     new ManufactoredMaterialResourceToken[] { ManufactoredMaterialResourceToken.GetUnitToken(ManufactoredMaterialType.Papyrus) },
+                                                     0
+                                                     ),
+
+                            // 6+ Players
+
+                            // 7+ Players
+                        };
 
                 case Age.Three:
-                    throw new NotImplementedException();
+
+                // 3+ Players
+
+                // 4+ Players
+
+                // 5+ Players
+
+                // 6+ Players
+
+                // 7+ Players
 
                 default:
                     throw new NotImplementedException();
@@ -344,7 +547,9 @@ namespace SevenWondersGameLibrary
                                             new RawMaterialResourceCost(0,0,1,0),
                                             ManufacturedMaterialResourceCost.Free,
                                             null,
-                                            new Guid[] { new Guid() }
+                                            new Guid[] {
+                                                new Guid("90F497BA-6801-4699-BCAB-7141DA3CD96E"),
+                                                new Guid("9DF416F1-ACF3-471E-BEA3-BC0996A57300") }
                                             ),
 
                             // [Guid("5DBC3B9A-DAD1-42AF-87D7-FFA7543E28FF")]
@@ -357,7 +562,9 @@ namespace SevenWondersGameLibrary
                                             RawMaterialResourceCost.Free,
                                             ManufacturedMaterialResourceCost.Free,
                                             null,
-                                            new Guid[] { new Guid() }
+                                            new Guid[] {
+                                                new Guid("CB97CA9A-63A4-4D1C-90E1-D2FB22FA7AB1"),
+                                                new Guid("CC884286-D176-4138-B30C-B25D5D032AF8") }
                                             ),
 
                             // [Guid("F0563D95-587C-4418-AF6F-16AC646BBFB1")]
@@ -370,7 +577,9 @@ namespace SevenWondersGameLibrary
                                             RawMaterialResourceCost.Free,
                                             ManufacturedMaterialResourceCost.Free,
                                             null,
-                                            new Guid[] { new Guid() }
+                                            new Guid[] {
+                                                new Guid("08086CDA-BDE4-4C26-9393-B6ED2D6EF6FE"),
+                                                new Guid("2152CB67-F432-4E7E-B4A8-A4B6DEFCF9D9") }
                                             ),
 
                             // [Guid("D4B99FFD-010D-4F7D-8DD5-30552D67B1F9")]
@@ -398,7 +607,9 @@ namespace SevenWondersGameLibrary
                                             RawMaterialResourceCost.Free,
                                             ManufacturedMaterialResourceCost.Free,
                                             null,
-                                            new Guid[] { new Guid() }
+                                            new Guid[] {
+                                                new Guid("CB97CA9A-63A4-4D1C-90E1-D2FB22FA7AB1"),
+                                                new Guid("CC884286-D176-4138-B30C-B25D5D032AF8") }
                                             ),
 
                             // 5+ Players
@@ -415,7 +626,9 @@ namespace SevenWondersGameLibrary
                                             RawMaterialResourceCost.Free,
                                             ManufacturedMaterialResourceCost.Free,
                                             null,
-                                            new Guid[] { new Guid() }
+                                            new Guid[] {
+                                                new Guid("08086CDA-BDE4-4C26-9393-B6ED2D6EF6FE"),
+                                                new Guid("2152CB67-F432-4E7E-B4A8-A4B6DEFCF9D9") }
                                             ),
 
                             // 7+ Players
@@ -430,7 +643,9 @@ namespace SevenWondersGameLibrary
                                             new RawMaterialResourceCost(0,0,1,0),
                                             ManufacturedMaterialResourceCost.Free,
                                             null,
-                                            new Guid[] { new Guid() }
+                                            new Guid[] {
+                                                new Guid("90F497BA-6801-4699-BCAB-7141DA3CD96E"),
+                                                new Guid("9DF416F1-ACF3-471E-BEA3-BC0996A57300") }
                                             ),
 
                             // [Guid("6F748053-0777-4A9C-A84A-6192F0ADAD2A")]
@@ -448,9 +663,162 @@ namespace SevenWondersGameLibrary
                         };
 
                 case Age.Two:
+
+                    return new List<ICultureCard>
+                        {
+                            // 3+ Players
+
+                            // [Guid("90F497BA-6801-4699-BCAB-7141DA3CD96E")]
+                            new CultureCard(new Guid("90F497BA-6801-4699-BCAB-7141DA3CD96E"),
+                                            Age.Two,
+                                            "Aqueduct",
+                                            string.Empty,
+                                            3,
+                                            5,
+                                            new RawMaterialResourceCost(0,0,3,0),
+                                            ManufacturedMaterialResourceCost.Free,
+                                            new Guid[] {
+                                                new Guid("1343C1C1-A58F-4E18-B1ED-E607253E8B53"),
+                                                new Guid("F17E03AE-7EE6-4074-801E-EBEE4EFCA2EB") },
+                                            null
+                                            ),
+
+                            // [Guid("08086CDA-BDE4-4C26-9393-B6ED2D6EF6FE")]
+                            new CultureCard(new Guid("08086CDA-BDE4-4C26-9393-B6ED2D6EF6FE"),
+                                            Age.Two,
+                                            "Statue",
+                                            string.Empty,
+                                            3,
+                                            4,
+                                            new RawMaterialResourceCost(0,2,0,1),
+                                            ManufacturedMaterialResourceCost.Free,
+                                            new Guid[] {
+                                                new Guid("F0563D95-587C-4418-AF6F-16AC646BBFB1"),
+                                                new Guid("2158F63E-B3B9-4A09-BEF9-7D5198B5C72A") },
+                                            new Guid[] {
+                                                new Guid()
+                                            }
+                                            ),
+
+                            // [Guid("3D1932E6-3A00-4EB4-A2E9-6476891AC4BE")]
+                            new CultureCard(new Guid("3D1932E6-3A00-4EB4-A2E9-6476891AC4BE"),
+                                            Age.Two,
+                                            "Courthouse",
+                                            string.Empty,
+                                            3,
+                                            4,
+                                            new RawMaterialResourceCost(2,0,0,0),
+                                            new ManufacturedMaterialResourceCost(0,1,0),
+                                            new Guid[] {
+                                                new Guid("14888B0E-4461-44C5-BE68-537B92009254"),
+                                                new Guid("75DAB02F-21B7-4C16-8EB3-760F2224E564") },
+                                            null
+                                            ),
+
+                            // [Guid("CB97CA9A-63A4-4D1C-90E1-D2FB22FA7AB1")]
+                            new CultureCard(new Guid("CB97CA9A-63A4-4D1C-90E1-D2FB22FA7AB1"),
+                                            Age.Two,
+                                            "Temple",
+                                            string.Empty,
+                                            3,
+                                            3,
+                                            new RawMaterialResourceCost(1,0,0,1),
+                                            new ManufacturedMaterialResourceCost(1,0,0),
+                                            new Guid[] {
+                                                new Guid("5DBC3B9A-DAD1-42AF-87D7-FFA7543E28FF"),
+                                                new Guid("72584E71-E892-470E-BBCC-004EFC1775EB") },
+                                            new Guid[] {
+                                                new Guid()
+                                            }
+                                            ),
+
+                            // 4+ Players
+
+                            // 5+ Players
+
+                            // [Guid("268573A7-894B-4EB7-AAEC-707CC92AF9FD")]
+                            new CultureCard(new Guid("268573A7-894B-4EB7-AAEC-707CC92AF9FD"),
+                                            Age.Two,
+                                            "Courthouse",
+                                            string.Empty,
+                                            5,
+                                            4,
+                                            new RawMaterialResourceCost(2,0,0,0),
+                                            new ManufacturedMaterialResourceCost(0,1,0),
+                                            new Guid[] {
+                                                new Guid("14888B0E-4461-44C5-BE68-537B92009254"),
+                                                new Guid("75DAB02F-21B7-4C16-8EB3-760F2224E564") },
+                                            null
+                                            ),
+
+                            // 6+ Players
+
+                            // [Guid("CC884286-D176-4138-B30C-B25D5D032AF8")]
+                            new CultureCard(new Guid("CC884286-D176-4138-B30C-B25D5D032AF8"),
+                                            Age.Two,
+                                            "Temple",
+                                            string.Empty,
+                                            6,
+                                            3,
+                                            new RawMaterialResourceCost(1,0,0,1),
+                                            new ManufacturedMaterialResourceCost(1,0,0),
+                                            new Guid[] {
+                                                new Guid("5DBC3B9A-DAD1-42AF-87D7-FFA7543E28FF"),
+                                                new Guid("72584E71-E892-470E-BBCC-004EFC1775EB") },
+                                            new Guid[] {
+                                                new Guid()
+                                            }
+                                            ),
+
+                            // 7+ Players
+
+                            // [Guid("9DF416F1-ACF3-471E-BEA3-BC0996A57300")]
+                            new CultureCard(new Guid("9DF416F1-ACF3-471E-BEA3-BC0996A57300"),
+                                            Age.Two,
+                                            "Aqueduct",
+                                            string.Empty,
+                                            7,
+                                            5,
+                                            new RawMaterialResourceCost(0,0,3,0),
+                                            ManufacturedMaterialResourceCost.Free,
+                                            new Guid[] {
+                                                new Guid("1343C1C1-A58F-4E18-B1ED-E607253E8B53"),
+                                                new Guid("F17E03AE-7EE6-4074-801E-EBEE4EFCA2EB") },
+                                            null
+                                            ),
+
+                            // [Guid("2152CB67-F432-4E7E-B4A8-A4B6DEFCF9D9")]
+                            new CultureCard(new Guid("2152CB67-F432-4E7E-B4A8-A4B6DEFCF9D9"),
+                                            Age.Two,
+                                            "Statue",
+                                            string.Empty,
+                                            7,
+                                            4,
+                                            new RawMaterialResourceCost(0,2,0,1),
+                                            ManufacturedMaterialResourceCost.Free,
+                                            new Guid[] {
+                                                new Guid("F0563D95-587C-4418-AF6F-16AC646BBFB1"),
+                                                new Guid("2158F63E-B3B9-4A09-BEF9-7D5198B5C72A") },
+                                            new Guid[] {
+                                                new Guid()
+                                            }
+                                            )
+                        };
+
                     throw new NotImplementedException();
 
                 case Age.Three:
+
+                    // 3+ Players
+
+                    // 4+ Players
+
+                    // 5+ Players
+
+                    // 6+ Players
+
+                    // 7+ Players
+
                     throw new NotImplementedException();
 
                 default:
@@ -555,9 +923,160 @@ namespace SevenWondersGameLibrary
                         };
 
                 case Age.Two:
-                    throw new NotImplementedException();
+                    return new List<IMilitaryCard>
+                        {
+                            // 3+ Players
+
+                            // [Guid("29476E9F-6C5D-4F79-86A3-80A7E83D76BA")]
+                            new MilitaryCard(new Guid("29476E9F-6C5D-4F79-86A3-80A7E83D76BA"),
+                                             Age.Two,
+                                             "Stables",
+                                             string.Empty,
+                                             3,
+                                             2,
+                                             new RawMaterialResourceCost(1,1,0,1),
+                                             ManufacturedMaterialResourceCost.Free,
+                                             new Guid[] {
+                                                 new Guid("68233C71-B70A-49F7-BE5B-071AF5A1107F"),
+                                                 new Guid("6E64447E-98E5-44F6-A021-6939566AAB42") },
+                                             null
+                                             ),
+
+                            // [Guid("03BE5384-FB1D-47F1-A235-E62BED13C697")]
+                            new MilitaryCard(new Guid("03BE5384-FB1D-47F1-A235-E62BED13C697"),
+                                             Age.Two,
+                                             "Archery Range",
+                                             string.Empty,
+                                             3,
+                                             2,
+                                             new RawMaterialResourceCost(0,1,0,2),
+                                             ManufacturedMaterialResourceCost.Free,
+                                             new Guid[] {
+                                                 new Guid("75DAB02F-21B7-4C16-8EB3-760F2224E564"),
+                                                 new Guid("75F57C08-6490-4171-A281-7ACC82A4296C") },
+                                             null
+                                             ),
+
+                            // [Guid("CCE6E9DC-1687-4BE7-8939-461DD96440AF")]
+                            new MilitaryCard(new Guid("CCE6E9DC-1687-4BE7-8939-461DD96440AF"),
+                                             Age.Two,
+                                             "Walls",
+                                             string.Empty,
+                                             3,
+                                             2,
+                                             new RawMaterialResourceCost(0,0,3,0),
+                                             ManufacturedMaterialResourceCost.Free,
+                                             null,
+                                             new Guid[] {
+                                                 new Guid() }
+                                             ),
+                            // 4+ Players
+
+                            // [Guid("51FCDE3C-119E-4A16-82A0-BD8D617A6D49")]
+                            new MilitaryCard(new Guid("51FCDE3C-119E-4A16-82A0-BD8D617A6D49"),
+                                             Age.Two,
+                                             "Training Ground",
+                                             string.Empty,
+                                             4,
+                                             2,
+                                             new RawMaterialResourceCost(0,2,0,1),
+                                             ManufacturedMaterialResourceCost.Free,
+                                             null,
+                                             new Guid[] {
+                                                 new Guid() }
+                                             ),
+
+                            // 5+ Players
+
+                            // [Guid("C99158E5-A008-43D7-8660-AD532A803CCF")]
+                            new MilitaryCard(new Guid("C99158E5-A008-43D7-8660-AD532A803CCF"),
+                                             Age.Two,
+                                             "Stables",
+                                             string.Empty,
+                                             5,
+                                             2,
+                                             new RawMaterialResourceCost(1,1,0,1),
+                                             ManufacturedMaterialResourceCost.Free,
+                                             new Guid[] {
+                                                 new Guid("68233C71-B70A-49F7-BE5B-071AF5A1107F"),
+                                                 new Guid("6E64447E-98E5-44F6-A021-6939566AAB42") },
+                                             null
+                                             ),
+
+                            // 6+ Players
+
+                            // [Guid("3FAFF4F3-806F-49DC-8AA5-13814745ABC2")]
+                            new MilitaryCard(new Guid("3FAFF4F3-806F-49DC-8AA5-13814745ABC2"),
+                                             Age.Two,
+                                             "Training Ground",
+                                             string.Empty,
+                                             6,
+                                             2,
+                                             new RawMaterialResourceCost(0,2,0,1),
+                                             ManufacturedMaterialResourceCost.Free,
+                                             null,
+                                             new Guid[] {
+                                                 new Guid() }
+                                             ),
+
+                            // [Guid("DABA8686-0BA4-4EDE-9297-F385F64BF9A5")]
+                            new MilitaryCard(new Guid("DABA8686-0BA4-4EDE-9297-F385F64BF9A5"),
+                                             Age.Two,
+                                             "Archery Range",
+                                             string.Empty,
+                                             6,
+                                             2,
+                                             new RawMaterialResourceCost(0,1,0,2),
+                                             ManufacturedMaterialResourceCost.Free,
+                                             new Guid[] {
+                                                 new Guid("75DAB02F-21B7-4C16-8EB3-760F2224E564"),
+                                                 new Guid("75F57C08-6490-4171-A281-7ACC82A4296C") },
+                                             null
+                                             ),
+
+                            // 7+ Players
+
+                            // [Guid("533A08A0-B6AF-4468-9773-79161BEDFD7B")]
+                            new MilitaryCard(new Guid("533A08A0-B6AF-4468-9773-79161BEDFD7B"),
+                                             Age.Two,
+                                             "Training Ground",
+                                             string.Empty,
+                                             7,
+                                             2,
+                                             new RawMaterialResourceCost(0,2,0,1),
+                                             ManufacturedMaterialResourceCost.Free,
+                                             null,
+                                             new Guid[] {
+                                                 new Guid() }
+                                             ),
+
+                            // [Guid("450AEC85-B216-4026-B759-46013E608983")]
+                            new MilitaryCard(new Guid("450AEC85-B216-4026-B759-46013E608983"),
+                                             Age.Two,
+                                             "Walls",
+                                             string.Empty,
+                                             7,
+                                             2,
+                                             new RawMaterialResourceCost(0,0,3,0),
+                                             ManufacturedMaterialResourceCost.Free,
+                                             null,
+                                             new Guid[] {
+                                                 new Guid() }
+                                             )
+                        };
 
                 case Age.Three:
+
+                    // 3+ Players
+
+                    // 4+ Players
+
+                    // 5+ Players
+
+                    // 6+ Players
+
+                    // 7+ Players
+
                     throw new NotImplementedException();
 
                 default:
@@ -656,9 +1175,31 @@ namespace SevenWondersGameLibrary
                         };
 
                 case Age.Two:
+
+                    // 3+ Players
+
+                    // 4+ Players
+
+                    // 5+ Players
+
+                    // 6+ Players
+
+                    // 7+ Players
+
                     throw new NotImplementedException();
 
                 case Age.Three:
+
+                    // 3+ Players
+
+                    // 4+ Players
+
+                    // 5+ Players
+
+                    // 6+ Players
+
+                    // 7+ Players
+
                     throw new NotImplementedException();
 
                 default:
@@ -834,9 +1375,31 @@ namespace SevenWondersGameLibrary
                         };
 
                 case Age.Two:
+
+                    // 3+ Players
+
+                    // 4+ Players
+
+                    // 5+ Players
+
+                    // 6+ Players
+
+                    // 7+ Players
+
                     throw new NotImplementedException();
 
                 case Age.Three:
+
+                    // 3+ Players
+
+                    // 4+ Players
+
+                    // 5+ Players
+
+                    // 6+ Players
+
+                    // 7+ Players
+
                     throw new NotImplementedException();
 
                 default:
