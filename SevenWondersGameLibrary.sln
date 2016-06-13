@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SevenWondersGameLibrary", "
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SevenWondersGameLibraryUnitTests", "SevenWondersGameLibraryUnitTests\SevenWondersGameLibraryUnitTests.csproj", "{1972223E-0F36-431E-8B51-1383ECF7A8CF}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SevenWondersGameEngine", "SevenWondersGameEngine\SevenWondersGameEngine.csproj", "{A3F0F009-C081-4D61-92E6-0366C7C209B4}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -51,6 +53,22 @@ Global
 		{1972223E-0F36-431E-8B51-1383ECF7A8CF}.Release|x64.Build.0 = Release|Any CPU
 		{1972223E-0F36-431E-8B51-1383ECF7A8CF}.Release|x86.ActiveCfg = Release|Any CPU
 		{1972223E-0F36-431E-8B51-1383ECF7A8CF}.Release|x86.Build.0 = Release|Any CPU
+		{A3F0F009-C081-4D61-92E6-0366C7C209B4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A3F0F009-C081-4D61-92E6-0366C7C209B4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A3F0F009-C081-4D61-92E6-0366C7C209B4}.Debug|ARM.ActiveCfg = Debug|ARM
+		{A3F0F009-C081-4D61-92E6-0366C7C209B4}.Debug|ARM.Build.0 = Debug|ARM
+		{A3F0F009-C081-4D61-92E6-0366C7C209B4}.Debug|x64.ActiveCfg = Debug|x64
+		{A3F0F009-C081-4D61-92E6-0366C7C209B4}.Debug|x64.Build.0 = Debug|x64
+		{A3F0F009-C081-4D61-92E6-0366C7C209B4}.Debug|x86.ActiveCfg = Debug|x86
+		{A3F0F009-C081-4D61-92E6-0366C7C209B4}.Debug|x86.Build.0 = Debug|x86
+		{A3F0F009-C081-4D61-92E6-0366C7C209B4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A3F0F009-C081-4D61-92E6-0366C7C209B4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A3F0F009-C081-4D61-92E6-0366C7C209B4}.Release|ARM.ActiveCfg = Release|ARM
+		{A3F0F009-C081-4D61-92E6-0366C7C209B4}.Release|ARM.Build.0 = Release|ARM
+		{A3F0F009-C081-4D61-92E6-0366C7C209B4}.Release|x64.ActiveCfg = Release|x64
+		{A3F0F009-C081-4D61-92E6-0366C7C209B4}.Release|x64.Build.0 = Release|x64
+		{A3F0F009-C081-4D61-92E6-0366C7C209B4}.Release|x86.ActiveCfg = Release|x86
+		{A3F0F009-C081-4D61-92E6-0366C7C209B4}.Release|x86.Build.0 = Release|x86
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
