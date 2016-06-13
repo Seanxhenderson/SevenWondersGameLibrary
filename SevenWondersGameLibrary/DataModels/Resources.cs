@@ -80,6 +80,52 @@ namespace SevenWondersGameLibrary.DataModels
         }
     }
 
+    public class MilitaryToken
+    {
+        private MilitaryToken(MilitaryResult militaryResult, int victoryPointsValue)
+        {
+            this.VictoryPointsValue = victoryPointsValue;
+        }
+
+        public static MilitaryToken GetMilitaryToken(MilitaryResult militaryResult)
+        {
+            switch (militaryResult)
+            {
+                case MilitaryResult.Loss1x:
+
+                    return new MilitaryToken(MilitaryResult.Loss1x, -1);
+
+                case MilitaryResult.Win1x:
+
+                    return new MilitaryToken(MilitaryResult.Win1x, 1);
+
+                case MilitaryResult.Win3x:
+
+                    return new MilitaryToken(MilitaryResult.Win3x, 3);
+
+                case MilitaryResult.Win5x:
+
+                    return new MilitaryToken(MilitaryResult.Win5x, 5);
+
+                default:
+
+                    throw new NotImplementedException();
+            }
+        }
+
+        public MilitaryResult MilitaryResult
+        {
+            get;
+            private set;
+        }
+
+        public int VictoryPointsValue
+        {
+            get;
+            private set;
+        }
+    }
+
     public class RawMaterialResourceCost : IEnumerable<RawMaterialResourceToken>
     {
         private List<RawMaterialResourceToken> resourceTokens = null;

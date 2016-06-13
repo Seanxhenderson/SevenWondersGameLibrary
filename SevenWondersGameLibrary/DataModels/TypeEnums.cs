@@ -38,6 +38,14 @@ namespace SevenWondersGameLibrary.DataModels
         WonderStage
     }
 
+    public enum MilitaryResult
+    {
+        Loss1x = 0x00,
+        Win1x,
+        Win3x,
+        Win5x
+    }
+
     public enum ApplicableDirection
     {
         Self,
