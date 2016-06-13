@@ -99,6 +99,22 @@ namespace SevenWondersGameLibrary
                 { new Guid("CB97CA9A-63A4-4D1C-90E1-D2FB22FA7AB1"), "[1/2][2] Temple" },
                 { new Guid("CC884286-D176-4138-B30C-B25D5D032AF8"), "[2/2][2] Temple" },
 
+                { new Guid("523860CB-BBC3-4CFB-8BC8-6B2713C9CEC0"), "[1/2][3] Gardens" },
+                { new Guid("8BB9F9FD-1589-4D22-BA2B-12CAAE019518"), "[2/2][3] Gardens" },
+
+                { new Guid("D957FFC8-6F27-4B65-BBCA-18C54117A4E8"), "[1/2][3] Senate" },
+                { new Guid("F967D945-6B77-4B15-9606-3E501F029F38"), "[2/2][3] Senate" },
+
+                { new Guid("B2FFF9DE-473A-4875-8AF9-C7066C860270"), "[1/2][3] Pantheon" },
+                { new Guid("4E785622-D81C-45BC-98AF-CD2E152E05FC"), "[2/2][3] Pantheon" },
+
+                { new Guid("563CB18F-84BD-475E-9842-9C6E3AF407B3"), "[1/2][3] Palace" },
+                { new Guid("2999639F-F22C-4F79-B6C5-E160821E6B4E"), "[2/2][3] Palace" },
+
+                { new Guid("50D34F86-0F32-42EE-A6C5-1E979B8A7504"), "[1/3][3] Town hall" },
+                { new Guid("51FE3DC6-3346-4F38-8AF0-9E7F2DF5B815"), "[2/3][3] Town hall" },
+                { new Guid("91DE2986-CD85-4BD1-B287-EA8D43AA508E"), "[3/3][3] Town hall" },
+
                 #endregion //Culture
 
                 #region Military
@@ -124,7 +140,21 @@ namespace SevenWondersGameLibrary
                 { new Guid("51FCDE3C-119E-4A16-82A0-BD8D617A6D49"), "[1/3][2] Training Ground" },
                 { new Guid("533A08A0-B6AF-4468-9773-79161BEDFD7B"), "[2/3][2] Training Ground" },
                 { new Guid("3FAFF4F3-806F-49DC-8AA5-13814745ABC2"), "[3/3][2] Training Ground" },
-                
+
+                { new Guid("931A9B62-8727-4555-AE59-382503FE49EC"), "[1/2][2] Fortifications" },
+                { new Guid("44054D3B-60A2-4CA3-B2B8-2CB88B86E2AC"), "[2/2][2] Fortifications" },
+
+                { new Guid("3B8D431A-3940-43FF-B1DE-048A4DF41E77"), "[1/2][2] Siege Workshop" },
+                { new Guid("DF62BC9C-9668-4841-B492-D996A26A8847"), "[2/2][2] Siege Workshop" },
+
+                { new Guid("332FC3A7-06E1-463A-8C58-D0DBE839AA72"), "[1/3][3] Circus" },
+                { new Guid("5A34E91D-4AE1-4DBE-972C-5D29F4F4B653"), "[2/3][3] Circus" },
+                { new Guid("350438EF-6EDE-49A2-AC22-0DEE476171DF"), "[3/3][3] Circus" },
+
+                { new Guid("DE1BF028-B8B9-4950-B090-1D0A3480A622"), "[1/3][3] Arsenal" },
+                { new Guid("3F781A87-14E9-431A-A6E3-A5316D1E3FC6"), "[2/3][3] Arsenal" },
+                { new Guid("50FCB861-0888-41D9-9DDD-2CF71DB403F3"), "[3/3][3] Arsenal" },
+
                 #endregion //Military
 
                 #region Science

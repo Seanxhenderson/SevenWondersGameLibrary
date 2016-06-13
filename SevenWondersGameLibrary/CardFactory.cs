@@ -342,6 +342,8 @@ namespace SevenWondersGameLibrary
 
                 case Age.Three:
 
+                    return new List<IRawMaterialCard>
+                    {
                         // 3+ Players
 
                         // 4+ Players
@@ -351,9 +353,8 @@ namespace SevenWondersGameLibrary
                         // 6+ Players
 
                         // 7+ Players
-
-                    throw new NotImplementedException();
-
+                    };
+                        
                 default:
                     throw new NotImplementedException();
             }
@@ -513,15 +514,18 @@ namespace SevenWondersGameLibrary
 
                 case Age.Three:
 
-                // 3+ Players
+                    return new List<IManufacturedMaterialCard>
+                    {
+                        // 3+ Players
 
-                // 4+ Players
+                        // 4+ Players
 
-                // 5+ Players
+                        // 5+ Players
 
-                // 6+ Players
+                        // 6+ Players
 
-                // 7+ Players
+                        // 7+ Players
+                    };
 
                 default:
                     throw new NotImplementedException();
@@ -809,17 +813,179 @@ namespace SevenWondersGameLibrary
 
                 case Age.Three:
 
-                    // 3+ Players
+                    return new List<ICultureCard>
+                    {
+                        // 3+ Players
 
-                    // 4+ Players
+                        // [Guid("523860CB-BBC3-4CFB-8BC8-6B2713C9CEC0")]
+                        new CultureCard(new Guid("523860CB-BBC3-4CFB-8BC8-6B2713C9CEC0"),
+                                        Age.Three,
+                                        "Gardens",
+                                        string.Empty,
+                                        3,
+                                        5,
+                                        new RawMaterialResourceCost(2,0,0,1),
+                                        ManufacturedMaterialResourceCost.Free,
+                                        new Guid[] {
+                                            new Guid("08086CDA-BDE4-4C26-9393-B6ED2D6EF6FE"),
+                                            new Guid("2152CB67-F432-4E7E-B4A8-A4B6DEFCF9D9")
+                                        },
+                                        null
+                                        ),
 
-                    // 5+ Players
+                        // [Guid("D957FFC8-6F27-4B65-BBCA-18C54117A4E8")]
+                        new CultureCard(new Guid("D957FFC8-6F27-4B65-BBCA-18C54117A4E8"),
+                                        Age.Three,
+                                        "Senate",
+                                        string.Empty,
+                                        3,
+                                        6,
+                                        new RawMaterialResourceCost(0,1,1,2),
+                                        ManufacturedMaterialResourceCost.Free,
+                                        new Guid[] {
+                                            new Guid("F998C675-70FF-43AD-A628-B25200CA354D"),
+                                            new Guid("F6363E52-C30A-4CE5-AD9D-5CD8962109B9")
+                                        },
+                                        null
+                                        ),
 
-                    // 6+ Players
+                        // [Guid("B2FFF9DE-473A-4875-8AF9-C7066C860270")]
+                        new CultureCard(new Guid("B2FFF9DE-473A-4875-8AF9-C7066C860270"),
+                                        Age.Three,
+                                        "Pantheon",
+                                        string.Empty,
+                                        3,
+                                        7,
+                                        new RawMaterialResourceCost(2,1,0,0),
+                                        new ManufacturedMaterialResourceCost(1,1,1),
+                                        new Guid[] {
+                                            new Guid("CB97CA9A-63A4-4D1C-90E1-D2FB22FA7AB1"),
+                                            new Guid("CC884286-D176-4138-B30C-B25D5D032AF8")
+                                        },
+                                        null
+                                        ),
 
-                    // 7+ Players
+                        // [Guid("563CB18F-84BD-475E-9842-9C6E3AF407B3")]
+                        new CultureCard(new Guid("563CB18F-84BD-475E-9842-9C6E3AF407B3"),
+                                        Age.Three,
+                                        "Palace",
+                                        string.Empty,
+                                        3,
+                                        8,
+                                        new RawMaterialResourceCost(1,1,1,1),
+                                        new ManufacturedMaterialResourceCost(1,1,1),
+                                        null,
+                                        null
+                                        ),
 
-                    throw new NotImplementedException();
+                        // [Guid("50D34F86-0F32-42EE-A6C5-1E979B8A7504")]
+                        new CultureCard(new Guid("50D34F86-0F32-42EE-A6C5-1E979B8A7504"),
+                                        Age.Three,
+                                        "Town Hall",
+                                        string.Empty,
+                                        3,
+                                        6,
+                                        new RawMaterialResourceCost(0,1,2,0),
+                                        new ManufacturedMaterialResourceCost(1,0,0),
+                                        null,
+                                        null
+                                        ),
+
+                        // 4+ Players
+
+                        // [Guid("8BB9F9FD-1589-4D22-BA2B-12CAAE019518")]
+                        new CultureCard(new Guid("8BB9F9FD-1589-4D22-BA2B-12CAAE019518"),
+                                        Age.Three,
+                                        "Gardens",
+                                        string.Empty,
+                                        4,
+                                        5,
+                                        new RawMaterialResourceCost(2,0,0,1),
+                                        ManufacturedMaterialResourceCost.Free,
+                                        new Guid[] {
+                                            new Guid("08086CDA-BDE4-4C26-9393-B6ED2D6EF6FE"),
+                                            new Guid("2152CB67-F432-4E7E-B4A8-A4B6DEFCF9D9")
+                                        },
+                                        null
+                                        ),
+
+                        // 5+ Players
+
+                        // [Guid("F967D945-6B77-4B15-9606-3E501F029F38")]
+                        new CultureCard(new Guid("F967D945-6B77-4B15-9606-3E501F029F38"),
+                                        Age.Three,
+                                        "Senate",
+                                        string.Empty,
+                                        5,
+                                        6,
+                                        new RawMaterialResourceCost(0,1,1,2),
+                                        ManufacturedMaterialResourceCost.Free,
+                                        new Guid[] {
+                                            new Guid("F998C675-70FF-43AD-A628-B25200CA354D"),
+                                            new Guid("F6363E52-C30A-4CE5-AD9D-5CD8962109B9")
+                                        },
+                                        null
+                                        ),
+
+                        // [Guid("51FE3DC6-3346-4F38-8AF0-9E7F2DF5B815")]
+                        new CultureCard(new Guid("51FE3DC6-3346-4F38-8AF0-9E7F2DF5B815"),
+                                        Age.Three,
+                                        "Town Hall",
+                                        string.Empty,
+                                        5,
+                                        6,
+                                        new RawMaterialResourceCost(0,1,2,0),
+                                        new ManufacturedMaterialResourceCost(1,0,0),
+                                        null,
+                                        null
+                                        ),
+
+                        // 6+ Players
+
+                        // [Guid("4E785622-D81C-45BC-98AF-CD2E152E05FC")]
+                        new CultureCard(new Guid("4E785622-D81C-45BC-98AF-CD2E152E05FC"),
+                                        Age.Three,
+                                        "Pantheon",
+                                        string.Empty,
+                                        6,
+                                        7,
+                                        new RawMaterialResourceCost(2,1,0,0),
+                                        new ManufacturedMaterialResourceCost(1,1,1),
+                                        new Guid[] {
+                                            new Guid("CB97CA9A-63A4-4D1C-90E1-D2FB22FA7AB1"),
+                                            new Guid("CC884286-D176-4138-B30C-B25D5D032AF8")
+                                        },
+                                        null
+                                        ),
+
+                        // [Guid("91DE2986-CD85-4BD1-B287-EA8D43AA508E")]
+                        new CultureCard(new Guid("91DE2986-CD85-4BD1-B287-EA8D43AA508E"),
+                                        Age.Three,
+                                        "Town Hall",
+                                        string.Empty,
+                                        6,
+                                        6,
+                                        new RawMaterialResourceCost(0,1,2,0),
+                                        new ManufacturedMaterialResourceCost(1,0,0),
+                                        null,
+                                        null
+                                        ),
+
+                        // 7+ Players
+
+                        // [Guid("2999639F-F22C-4F79-B6C5-E160821E6B4E")]
+                        new CultureCard(new Guid("2999639F-F22C-4F79-B6C5-E160821E6B4E"),
+                                        Age.Three,
+                                        "Palace",
+                                        string.Empty,
+                                        7,
+                                        8,
+                                        new RawMaterialResourceCost(1,1,1,1),
+                                        new ManufacturedMaterialResourceCost(1,1,1),
+                                        null,
+                                        null
+                                        ),
+                    };
 
                 default:
                     throw new NotImplementedException();
@@ -831,6 +997,7 @@ namespace SevenWondersGameLibrary
             switch (age)
             {
                 case Age.One:
+
                     return new List<IMilitaryCard>
                         {
                             // 3+ Players
@@ -923,6 +1090,7 @@ namespace SevenWondersGameLibrary
                         };
 
                 case Age.Two:
+
                     return new List<IMilitaryCard>
                         {
                             // 3+ Players
@@ -972,6 +1140,7 @@ namespace SevenWondersGameLibrary
                                              new Guid[] {
                                                  new Guid() }
                                              ),
+
                             // 4+ Players
 
                             // [Guid("51FCDE3C-119E-4A16-82A0-BD8D617A6D49")]
@@ -1071,17 +1240,172 @@ namespace SevenWondersGameLibrary
 
                 case Age.Three:
 
-                    // 3+ Players
+                    return new List<IMilitaryCard>
+                    {
+                        // 3+ Players
 
-                    // 4+ Players
+                        // [Guid("DE1BF028-B8B9-4950-B090-1D0A3480A622")]
+                        new MilitaryCard(new Guid("DE1BF028-B8B9-4950-B090-1D0A3480A622"),
+                                         Age.Three,
+                                         "Arsenal",
+                                         string.Empty,
+                                         3,
+                                         3,
+                                         new RawMaterialResourceCost(0,1,0,2),
+                                         new ManufacturedMaterialResourceCost(0,1,0),
+                                         null,
+                                         null
+                                         ),
 
-                    // 5+ Players
+                        // [Guid("931A9B62-8727-4555-AE59-382503FE49EC")]
+                        new MilitaryCard(new Guid("931A9B62-8727-4555-AE59-382503FE49EC"),
+                                         Age.Three,
+                                         "Fortification",
+                                         string.Empty,
+                                         3,
+                                         3,
+                                         new RawMaterialResourceCost(0,3,1,0),
+                                         ManufacturedMaterialResourceCost.Free,
+                                         new Guid[] {
+                                             new Guid("CCE6E9DC-1687-4BE7-8939-461DD96440AF"),
+                                             new Guid("450AEC85-B216-4026-B759-46013E608983")
+                                         },
+                                         null
+                                         ),
 
-                    // 6+ Players
+                        // [Guid("3B8D431A-3940-43FF-B1DE-048A4DF41E77")]
+                        new MilitaryCard(new Guid("3B8D431A-3940-43FF-B1DE-048A4DF41E77"),
+                                         Age.Three,
+                                         "Siege Workshop",
+                                         string.Empty,
+                                         3,
+                                         3,
+                                         new RawMaterialResourceCost(3,0,0,1),
+                                         ManufacturedMaterialResourceCost.Free,
+                                         new Guid[] {
+                                             new Guid("7323344C-BE83-4EE4-BB33-B7ADD7288A8D"),
+                                             new Guid("BA118433-A993-4C1D-B31D-FA9D97167442")
+                                         },
+                                         null
+                                         ),
 
-                    // 7+ Players
+                        // 4+ Players
 
-                    throw new NotImplementedException();
+                        // [Guid("3F781A87-14E9-431A-A6E3-A5316D1E3FC6")]
+                        new MilitaryCard(new Guid("3F781A87-14E9-431A-A6E3-A5316D1E3FC6"),
+                                         Age.Three,
+                                         "Arsenal",
+                                         string.Empty,
+                                         4,
+                                         3,
+                                         new RawMaterialResourceCost(0,1,0,2),
+                                         new ManufacturedMaterialResourceCost(0,1,0),
+                                         null,
+                                         null
+                                         ),
+
+                        // [Guid("332FC3A7-06E1-463A-8C58-D0DBE839AA72")]
+                        new MilitaryCard(new Guid("332FC3A7-06E1-463A-8C58-D0DBE839AA72"),
+                                         Age.Three,
+                                         "Circus",
+                                         string.Empty,
+                                         4,
+                                         3,
+                                         new RawMaterialResourceCost(0,1,3,0),
+                                         ManufacturedMaterialResourceCost.Free,
+                                         new Guid[] {
+                                             new Guid("51FCDE3C-119E-4A16-82A0-BD8D617A6D49"),
+                                             new Guid("533A08A0-B6AF-4468-9773-79161BEDFD7B"),
+                                             new Guid("3FAFF4F3-806F-49DC-8AA5-13814745ABC2")
+                                         },
+                                         null
+                                         ),
+
+                        // 5+ Players
+
+                        // [Guid("5A34E91D-4AE1-4DBE-972C-5D29F4F4B653")]
+                        new MilitaryCard(new Guid("5A34E91D-4AE1-4DBE-972C-5D29F4F4B653"),
+                                         Age.Three,
+                                         "Circus",
+                                         string.Empty,
+                                         5,
+                                         3,
+                                         new RawMaterialResourceCost(0,1,3,0),
+                                         ManufacturedMaterialResourceCost.Free,
+                                         new Guid[] {
+                                             new Guid("51FCDE3C-119E-4A16-82A0-BD8D617A6D49"),
+                                             new Guid("533A08A0-B6AF-4468-9773-79161BEDFD7B"),
+                                             new Guid("3FAFF4F3-806F-49DC-8AA5-13814745ABC2")
+                                         },
+                                         null
+                                         ),
+
+                        // [Guid("DF62BC9C-9668-4841-B492-D996A26A8847")]
+                        new MilitaryCard(new Guid("DF62BC9C-9668-4841-B492-D996A26A8847"),
+                                         Age.Three,
+                                         "Siege Workshop",
+                                         string.Empty,
+                                         5,
+                                         3,
+                                         new RawMaterialResourceCost(3,0,0,1),
+                                         ManufacturedMaterialResourceCost.Free,
+                                         new Guid[] {
+                                             new Guid("7323344C-BE83-4EE4-BB33-B7ADD7288A8D"),
+                                             new Guid("BA118433-A993-4C1D-B31D-FA9D97167442")
+                                         },
+                                         null
+                                         ),
+
+                        // 6+ Players
+
+                        // [Guid("350438EF-6EDE-49A2-AC22-0DEE476171DF")]
+                        new MilitaryCard(new Guid("350438EF-6EDE-49A2-AC22-0DEE476171DF"),
+                                         Age.Three,
+                                         "Circus",
+                                         string.Empty,
+                                         6,
+                                         3,
+                                         new RawMaterialResourceCost(0,1,3,0),
+                                         ManufacturedMaterialResourceCost.Free,
+                                         new Guid[] {
+                                             new Guid("51FCDE3C-119E-4A16-82A0-BD8D617A6D49"),
+                                             new Guid("533A08A0-B6AF-4468-9773-79161BEDFD7B"),
+                                             new Guid("3FAFF4F3-806F-49DC-8AA5-13814745ABC2")
+                                         },
+                                         null
+                                         ),
+
+                        // 7+ Players
+
+                        // [Guid("50FCB861-0888-41D9-9DDD-2CF71DB403F3")]
+                        new MilitaryCard(new Guid("50FCB861-0888-41D9-9DDD-2CF71DB403F3"),
+                                         Age.Three,
+                                         "Arsenal",
+                                         string.Empty,
+                                         7,
+                                         3,
+                                         new RawMaterialResourceCost(0,1,0,2),
+                                         new ManufacturedMaterialResourceCost(0,1,0),
+                                         null,
+                                         null
+                                         ),
+
+                        // [Guid("44054D3B-60A2-4CA3-B2B8-2CB88B86E2AC")]
+                        new MilitaryCard(new Guid("44054D3B-60A2-4CA3-B2B8-2CB88B86E2AC"),
+                                         Age.Three,
+                                         "Fortification",
+                                         string.Empty,
+                                         7,
+                                         3,
+                                         new RawMaterialResourceCost(0,3,1,0),
+                                         ManufacturedMaterialResourceCost.Free,
+                                         new Guid[] {
+                                             new Guid("CCE6E9DC-1687-4BE7-8939-461DD96440AF"),
+                                             new Guid("450AEC85-B216-4026-B759-46013E608983")
+                                         },
+                                         null
+                                         ),
+                    };
 
                 default:
                     throw new NotImplementedException();
