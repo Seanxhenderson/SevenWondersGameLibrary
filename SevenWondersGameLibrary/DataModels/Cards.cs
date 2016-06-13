@@ -388,4 +388,89 @@ namespace SevenWondersGameLibrary.DataModels
             private set;
         }
     }
+
+    public abstract class GuildCardBase : AgeCard, IGuildCard
+    {
+        public GuildCardBase(
+            Guid id,
+            Age age,
+            string title,
+            string description,
+            uint minimumNumberOfPlayers,
+            ApplicableDirection usabilityDirection,
+            RawMaterialResourceCost rawMaterialResourceCost,
+            ManufacturedMaterialResourceCost manufacturedMaterialResourceCost,
+            IEnumerable<Guid> baseCardId,
+            IEnumerable<Guid> derivedCardIds)
+            : base(id, age, title, description, minimumNumberOfPlayers, 0, rawMaterialResourceCost, manufacturedMaterialResourceCost, baseCardId, derivedCardIds)
+        {
+            this.UsabilityDirection = usabilityDirection;
+        }
+
+        public ApplicableDirection UsabilityDirection
+        {
+            get;
+            protected set;
+        }
+    }
+
+    public sealed class GuildRewardPerSymbolCard : GuildCardBase, IGuildRewardPerSymbolCard
+    {
+        public GuildRewardPerSymbolCard(
+            Guid id,
+            Age age,
+            string title,
+            string description,
+            uint minimumNumberOfPlayers,
+            SymbolType symbolType,
+            uint victoryPointsPerSymbolType,
+            ApplicableDirection usabilityDirection,
+            RawMaterialResourceCost rawMaterialResourceCost,
+            ManufacturedMaterialResourceCost manufacturedMaterialResourceCost,
+            IEnumerable<Guid> baseCardId,
+            IEnumerable<Guid> derivedCardIds)
+            : base(id, age, title, description, minimumNumberOfPlayers, usabilityDirection, rawMaterialResourceCost, manufacturedMaterialResourceCost, baseCardId, derivedCardIds)
+        {
+            this.SymbolType = symbolType;
+            this.VictoryPointsPerSymbolType = victoryPointsPerSymbolType;
+        }
+
+        public SymbolType SymbolType
+        {
+            get;
+            private set;
+        }
+
+        public uint VictoryPointsPerSymbolType
+        {
+            get;
+            private set;
+        }
+    }
+
+    public sealed class GuildRewardScienceCard : GuildCardBase, IGuildRewardScienceCard
+    {
+        public GuildRewardScienceCard(
+            Guid id,
+            Age age,
+            string title,
+            string description,
+            uint minimumNumberOfPlayers,
+            ScienceType scienceRewardType,
+            ApplicableDirection usabilityDirection,
+            RawMaterialResourceCost rawMaterialResourceCost,
+            ManufacturedMaterialResourceCost manufacturedMaterialResourceCost,
+            IEnumerable<Guid> baseCardId,
+            IEnumerable<Guid> derivedCardIds)
+            : base(id, age, title, description, minimumNumberOfPlayers, usabilityDirection, rawMaterialResourceCost, manufacturedMaterialResourceCost, baseCardId, derivedCardIds)
+        {
+            this.ScienceRewardType = scienceRewardType;
+        }
+
+        public ScienceType ScienceRewardType
+        {
+            get;
+            private set;
+        }
+    }
 }

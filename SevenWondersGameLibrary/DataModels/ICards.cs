@@ -97,6 +97,18 @@ namespace SevenWondersGameLibrary.DataModels
 
     public interface IGuildCard : IAgeCard
     {
+        ApplicableDirection UsabilityDirection { get; }
+    }
 
+    public interface IGuildRewardScienceCard : IGuildCard
+    {
+        ScienceType ScienceRewardType { get; }
+    }
+
+    public interface IGuildRewardPerSymbolCard : IGuildCard
+    {
+        SymbolType SymbolType { get; }
+
+        uint VictoryPointsPerSymbolType { get; }
     }
 }

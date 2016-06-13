@@ -34,12 +34,12 @@ namespace SevenWondersGameLibrary.DataModels
         Military,
         Commerce,
         Guild,
+        MilitaryLoss,
         WonderStage
     }
 
     public enum ApplicableDirection
     {
-        None,
         Self,
         Left,
         Right,
@@ -73,9 +73,10 @@ namespace SevenWondersGameLibrary.DataModels
         Three
     }
 
+    [Flags]
     public enum ScienceType
     {
-        Gear,
+        Gear = 0x00,
         Tools,
         Glyph
     }

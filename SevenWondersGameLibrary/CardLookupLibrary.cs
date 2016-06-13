@@ -243,6 +243,26 @@ namespace SevenWondersGameLibrary
 
                 #region Guild
 
+                { new Guid("23D0657A-1901-42FB-B14F-ECD3D4C775C9"), "[1/1][3] Builders Guild" },
+
+                { new Guid("F381FAE9-E952-4122-9BA1-C03E52725D1B"), "[1/1][3] Craftsmens Guild" },
+
+                { new Guid("033943A7-DE0F-4CB0-9602-F8AB30BAF263"), "[1/1][3] Magistrates Guild" },
+
+                { new Guid("671B5ED5-8EEE-4B08-938E-1DD307D86B04"), "[1/1][3] Philosophers Guild" },
+
+                { new Guid("2E2745F8-9023-4FC1-A769-E4F240058A5E"), "[1/1][3] Scientists Guild" },
+
+                { new Guid("0F0840D6-7B9F-4A6F-960F-02ECC9E11811"), "[1/1][3] Shipowners Guild" },
+
+                { new Guid("A837CC0C-2543-4CFA-9319-E2681214117C"), "[1/1][3] Spies Guild" },
+
+                { new Guid("964EF4EC-A00D-4E55-B54C-FC8A3F1C02FB"), "[1/1][3] Strategists Guild" },
+
+                { new Guid("8D29007A-2B75-41C1-86D8-55E6EE1F9A53"), "[1/1][3] Traders Guild" },
+
+                { new Guid("512BA85C-3EC3-46FD-8F13-6AA63225CAB4"), "[1/1][3] Workers Guild" },
+
                 #endregion //Guild
             };
         }
