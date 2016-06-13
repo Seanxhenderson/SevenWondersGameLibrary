@@ -938,7 +938,8 @@ namespace SevenWondersGameLibrary
                                              ManufacturedMaterialResourceCost.Free,
                                              new Guid[] {
                                                  new Guid("68233C71-B70A-49F7-BE5B-071AF5A1107F"),
-                                                 new Guid("6E64447E-98E5-44F6-A021-6939566AAB42") },
+                                                 new Guid("6E64447E-98E5-44F6-A021-6939566AAB42")
+                                                 },
                                              null
                                              ),
 
@@ -953,7 +954,8 @@ namespace SevenWondersGameLibrary
                                              ManufacturedMaterialResourceCost.Free,
                                              new Guid[] {
                                                  new Guid("75DAB02F-21B7-4C16-8EB3-760F2224E564"),
-                                                 new Guid("75F57C08-6490-4171-A281-7ACC82A4296C") },
+                                                 new Guid("75F57C08-6490-4171-A281-7ACC82A4296C")
+                                                 },
                                              null
                                              ),
 
@@ -999,7 +1001,8 @@ namespace SevenWondersGameLibrary
                                              ManufacturedMaterialResourceCost.Free,
                                              new Guid[] {
                                                  new Guid("68233C71-B70A-49F7-BE5B-071AF5A1107F"),
-                                                 new Guid("6E64447E-98E5-44F6-A021-6939566AAB42") },
+                                                 new Guid("6E64447E-98E5-44F6-A021-6939566AAB42")
+                                                 },
                                              null
                                              ),
 
@@ -1030,7 +1033,8 @@ namespace SevenWondersGameLibrary
                                              ManufacturedMaterialResourceCost.Free,
                                              new Guid[] {
                                                  new Guid("75DAB02F-21B7-4C16-8EB3-760F2224E564"),
-                                                 new Guid("75F57C08-6490-4171-A281-7ACC82A4296C") },
+                                                 new Guid("75F57C08-6490-4171-A281-7ACC82A4296C")
+                                                 },
                                              null
                                              ),
 
@@ -1089,6 +1093,7 @@ namespace SevenWondersGameLibrary
             switch (age)
             {
                 case Age.One:
+
                     return new List<IScienceCard>
                         {
                             // 3+ Players
@@ -1100,9 +1105,15 @@ namespace SevenWondersGameLibrary
                                             string.Empty,
                                             3,
                                             ScienceType.Tools,
+                                            RawMaterialResourceCost.Free,
                                             new ManufacturedMaterialResourceCost(0,1,0),
                                             null,
-                                            new Guid[] { new Guid(), new Guid() }
+                                            new Guid[] {
+                                                new Guid("29476E9F-6C5D-4F79-86A3-80A7E83D76BA"),
+                                                new Guid("C99158E5-A008-43D7-8660-AD532A803CCF"),
+                                                new Guid("CDE83578-2ADB-4318-A94D-07EF0218C342"),
+                                                new Guid("752A27A2-1857-40B8-803C-DCE3481367BB"),
+                                                }
                                             ),
 
                             // [Guid("14888B0E-4461-44C5-BE68-537B92009254")]
@@ -1112,9 +1123,15 @@ namespace SevenWondersGameLibrary
                                             string.Empty,
                                             3,
                                             ScienceType.Glyph,
+                                            RawMaterialResourceCost.Free,
                                             new ManufacturedMaterialResourceCost(0,0,1),
                                             null,
-                                            new Guid[] { new Guid(), new Guid() }
+                                            new Guid[] {
+                                                new Guid("3D1932E6-3A00-4EB4-A2E9-6476891AC4BE"),
+                                                new Guid("268573A7-894B-4EB7-AAEC-707CC92AF9FD"),
+                                                new Guid("F998C675-70FF-43AD-A628-B25200CA354D"),
+                                                new Guid("F6363E52-C30A-4CE5-AD9D-5CD8962109B9"),
+                                                }
                                             ),
 
                             // [Guid("75DAB02F-21B7-4C16-8EB3-760F2224E564")]
@@ -1124,9 +1141,15 @@ namespace SevenWondersGameLibrary
                                             string.Empty,
                                             3,
                                             ScienceType.Gear,
+                                            RawMaterialResourceCost.Free,
                                             new ManufacturedMaterialResourceCost(1,0,0),
                                             null,
-                                            new Guid[] { new Guid(), new Guid() }
+                                            new Guid[] {
+                                                new Guid("7323344C-BE83-4EE4-BB33-B7ADD7288A8D"),
+                                                new Guid("BA118433-A993-4C1D-B31D-FA9D97167442"),
+                                                new Guid("03BE5384-FB1D-47F1-A235-E62BED13C697"),
+                                                new Guid("DABA8686-0BA4-4EDE-9297-F385F64BF9A5"),
+                                                }
                                             ),
 
                             // 4+ Players
@@ -1138,9 +1161,15 @@ namespace SevenWondersGameLibrary
                                             string.Empty,
                                             4,
                                             ScienceType.Glyph,
+                                            RawMaterialResourceCost.Free,
                                             new ManufacturedMaterialResourceCost(0,0,1),
                                             null,
-                                            new Guid[] { new Guid(), new Guid() }
+                                            new Guid[] {
+                                                new Guid("3D1932E6-3A00-4EB4-A2E9-6476891AC4BE"),
+                                                new Guid("268573A7-894B-4EB7-AAEC-707CC92AF9FD"),
+                                                new Guid("F998C675-70FF-43AD-A628-B25200CA354D"),
+                                                new Guid("F6363E52-C30A-4CE5-AD9D-5CD8962109B9"),
+                                                }
                                             ),
 
                             // 5+ Players
@@ -1152,9 +1181,15 @@ namespace SevenWondersGameLibrary
                                             string.Empty,
                                             5,
                                             ScienceType.Tools,
+                                            RawMaterialResourceCost.Free,
                                             new ManufacturedMaterialResourceCost(0,1,0),
                                             null,
-                                            new Guid[] { new Guid(), new Guid() }
+                                            new Guid[] {
+                                                new Guid("29476E9F-6C5D-4F79-86A3-80A7E83D76BA"),
+                                                new Guid("C99158E5-A008-43D7-8660-AD532A803CCF"),
+                                                new Guid("CDE83578-2ADB-4318-A94D-07EF0218C342"),
+                                                new Guid("752A27A2-1857-40B8-803C-DCE3481367BB"),
+                                                }
                                             ),
 
                             // 6+ Players
@@ -1168,25 +1203,155 @@ namespace SevenWondersGameLibrary
                                             string.Empty,
                                             7,
                                             ScienceType.Gear,
+                                            RawMaterialResourceCost.Free,
                                             new ManufacturedMaterialResourceCost(1,0,0),
                                             null,
-                                            new Guid[] { new Guid(), new Guid() }
-                                            ),
+                                            new Guid[] {
+                                                new Guid("7323344C-BE83-4EE4-BB33-B7ADD7288A8D"),
+                                                new Guid("BA118433-A993-4C1D-B31D-FA9D97167442"),
+                                                new Guid("03BE5384-FB1D-47F1-A235-E62BED13C697"),
+                                                new Guid("DABA8686-0BA4-4EDE-9297-F385F64BF9A5"),
+                                                }
+                                            )
                         };
 
                 case Age.Two:
 
-                    // 3+ Players
+                    return new List<IScienceCard>
+                        {
+                            // 3+ Players
 
-                    // 4+ Players
+                            // [Guid("CDE83578-2ADB-4318-A94D-07EF0218C342")]
+                            new ScienceCard(new Guid("CDE83578-2ADB-4318-A94D-07EF0218C342"),
+                                            Age.Two,
+                                            "Dispensary",
+                                            string.Empty,
+                                            3,
+                                            ScienceType.Tools,
+                                            new RawMaterialResourceCost(0,2,0,0),
+                                            new ManufacturedMaterialResourceCost(1,0,0),
+                                            new Guid[] {
+                                                new Guid("68233C71-B70A-49F7-BE5B-071AF5A1107F"),
+                                                new Guid("6E64447E-98E5-44F6-A021-6939566AAB42")
+                                                },
+                                            new Guid[] { new Guid(), new Guid() }
+                                            ), 
 
-                    // 5+ Players
+                            // [Guid("7323344C-BE83-4EE4-BB33-B7ADD7288A8D")]
+                            new ScienceCard(new Guid("7323344C-BE83-4EE4-BB33-B7ADD7288A8D"),
+                                            Age.Two,
+                                            "Laboratory",
+                                            string.Empty,
+                                            3,
+                                            ScienceType.Tools,
+                                            new RawMaterialResourceCost(2,0,0,0),
+                                            new ManufacturedMaterialResourceCost(0,0,1),
+                                            new Guid[] {
+                                                new Guid("75DAB02F-21B7-4C16-8EB3-760F2224E564"),
+                                                new Guid("75F57C08-6490-4171-A281-7ACC82A4296C")
+                                                },
+                                            new Guid[] { new Guid(), new Guid() }
+                                            ), 
 
-                    // 6+ Players
+                            // [Guid("F998C675-70FF-43AD-A628-B25200CA354D")]
+                            new ScienceCard(new Guid("F998C675-70FF-43AD-A628-B25200CA354D"),
+                                            Age.Two,
+                                            "Library",
+                                            string.Empty,
+                                            3,
+                                            ScienceType.Tools,
+                                            new RawMaterialResourceCost(0,0,2,0),
+                                            new ManufacturedMaterialResourceCost(0,1,0),
+                                            new Guid[] {
+                                                new Guid("14888B0E-4461-44C5-BE68-537B92009254"),
+                                                new Guid("75DAB02F-21B7-4C16-8EB3-760F2224E564")
+                                                },
+                                            new Guid[] { new Guid(), new Guid() }
+                                            ), 
 
-                    // 7+ Players
+                            // [Guid("288BB8E5-CA12-40B2-9D2D-9C314EB64C3F")]
+                            new ScienceCard(new Guid("288BB8E5-CA12-40B2-9D2D-9C314EB64C3F"),
+                                            Age.Two,
+                                            "School",
+                                            string.Empty,
+                                            3,
+                                            ScienceType.Tools,
+                                            new RawMaterialResourceCost(0,0,0,1),
+                                            new ManufacturedMaterialResourceCost(0,0,1),
+                                            null,
+                                            new Guid[] { new Guid(), new Guid() }
+                                            ), 
 
-                    throw new NotImplementedException();
+                            // 4+ Players
+
+                            // [Guid("752A27A2-1857-40B8-803C-DCE3481367BB")]
+                            new ScienceCard(new Guid("752A27A2-1857-40B8-803C-DCE3481367BB"),
+                                            Age.Two,
+                                            "Dispensary",
+                                            string.Empty,
+                                            4,
+                                            ScienceType.Tools,
+                                            new RawMaterialResourceCost(0,2,0,0),
+                                            new ManufacturedMaterialResourceCost(1,0,0),
+                                            new Guid[] {
+                                                new Guid("68233C71-B70A-49F7-BE5B-071AF5A1107F"),
+                                                new Guid("6E64447E-98E5-44F6-A021-6939566AAB42")
+                                                },
+                                            new Guid[] { new Guid(), new Guid() }
+                                            ), 
+
+                            // 5+ Players
+
+                            // [Guid("BA118433-A993-4C1D-B31D-FA9D97167442")]
+                            new ScienceCard(new Guid("BA118433-A993-4C1D-B31D-FA9D97167442"),
+                                            Age.Two,
+                                            "Laboratory",
+                                            string.Empty,
+                                            5,
+                                            ScienceType.Tools,
+                                            new RawMaterialResourceCost(2,0,0,0),
+                                            new ManufacturedMaterialResourceCost(0,0,1),
+                                            new Guid[] {
+                                                new Guid("75DAB02F-21B7-4C16-8EB3-760F2224E564"),
+                                                new Guid("75F57C08-6490-4171-A281-7ACC82A4296C")
+                                                },
+                                            new Guid[] { new Guid(), new Guid() }
+                                            ), 
+
+                            // 6+ Players
+
+                            // [Guid("F6363E52-C30A-4CE5-AD9D-5CD8962109B9")]
+                            new ScienceCard(new Guid("F6363E52-C30A-4CE5-AD9D-5CD8962109B9"),
+                                            Age.Two,
+                                            "Library",
+                                            string.Empty,
+                                            8,
+                                            ScienceType.Tools,
+                                            new RawMaterialResourceCost(0,0,2,0),
+                                            new ManufacturedMaterialResourceCost(0,1,0),
+                                            new Guid[] {
+                                                new Guid("14888B0E-4461-44C5-BE68-537B92009254"),
+                                                new Guid("75DAB02F-21B7-4C16-8EB3-760F2224E564")
+                                                },
+                                            new Guid[] { new Guid(), new Guid() }
+                                            ), 
+
+                            // 7+ Players
+
+                            // [Guid("211BF055-C108-4CA1-BB24-CECB7CE51D7A")]
+                            new ScienceCard(new Guid("211BF055-C108-4CA1-BB24-CECB7CE51D7A"),
+                                            Age.Two,
+                                            "School",
+                                            string.Empty,
+                                            7,
+                                            ScienceType.Tools,
+                                            new RawMaterialResourceCost(0,0,0,1),
+                                            new ManufacturedMaterialResourceCost(0,0,1),
+                                            null,
+                                            new Guid[] { new Guid(), new Guid() }
+                                            ), 
+
+                        };
 
                 case Age.Three:
 
@@ -1212,6 +1377,7 @@ namespace SevenWondersGameLibrary
             switch (age)
             {
                 case Age.One:
+
                     return new List<ICommerceCard>
                         {
                             // 3+ Players
@@ -1231,6 +1397,8 @@ namespace SevenWondersGameLibrary
                                                                     RawMaterialResourceToken.GetUnitToken(RawMaterialType.Wood)
                                                                 },
                                                                 ApplicableDirection.Right,
+                                                                RawMaterialResourceCost.Free,
+                                                                ManufacturedMaterialResourceCost.Free,
                                                                 null,
                                                                 new Guid[] { new Guid() }
                                                                 ),
@@ -1249,6 +1417,8 @@ namespace SevenWondersGameLibrary
                                                                              ManufactoredMaterialResourceToken.GetUnitToken(ManufactoredMaterialType.Papyrus)
                                                                          },
                                                                          ApplicableDirection.LeftAndRight,
+                                                                         RawMaterialResourceCost.Free,
+                                                                         ManufacturedMaterialResourceCost.Free,
                                                                          null,
                                                                          new Guid[] { new Guid() }
                                                                          ),
@@ -1268,6 +1438,8 @@ namespace SevenWondersGameLibrary
                                                                     RawMaterialResourceToken.GetUnitToken(RawMaterialType.Wood)
                                                                 },
                                                                 ApplicableDirection.Left,
+                                                                RawMaterialResourceCost.Free,
+                                                                ManufacturedMaterialResourceCost.Free,
                                                                 null,
                                                                 new Guid[] { new Guid() }
                                                                 ),
@@ -1282,6 +1454,8 @@ namespace SevenWondersGameLibrary
                                                  4,
                                                  5,
                                                  ApplicableDirection.None,
+                                                 RawMaterialResourceCost.Free,
+                                                 ManufacturedMaterialResourceCost.Free,
                                                  null,
                                                  null
                                                  ),
@@ -1296,6 +1470,8 @@ namespace SevenWondersGameLibrary
                                                  5,
                                                  5,
                                                  ApplicableDirection.None,
+                                                 RawMaterialResourceCost.Free,
+                                                 ManufacturedMaterialResourceCost.Free,
                                                  null,
                                                  null
                                                  ),
@@ -1316,6 +1492,8 @@ namespace SevenWondersGameLibrary
                                                                              ManufactoredMaterialResourceToken.GetUnitToken(ManufactoredMaterialType.Papyrus)
                                                                          },
                                                                          ApplicableDirection.LeftAndRight,
+                                                                         RawMaterialResourceCost.Free,
+                                                                         ManufacturedMaterialResourceCost.Free,
                                                                          null,
                                                                          new Guid[] { new Guid() }
                                                                          ),
@@ -1337,6 +1515,8 @@ namespace SevenWondersGameLibrary
                                                                     RawMaterialResourceToken.GetUnitToken(RawMaterialType.Wood)
                                                                 },
                                                                 ApplicableDirection.Right,
+                                                                RawMaterialResourceCost.Free,
+                                                                ManufacturedMaterialResourceCost.Free,
                                                                 null,
                                                                 new Guid[] { new Guid() }
                                                                 ),
@@ -1349,6 +1529,8 @@ namespace SevenWondersGameLibrary
                                                  7,
                                                  5,
                                                  ApplicableDirection.None,
+                                                 RawMaterialResourceCost.Free,
+                                                 ManufacturedMaterialResourceCost.Free,
                                                  null,
                                                  null
                                                  ),
@@ -1368,6 +1550,8 @@ namespace SevenWondersGameLibrary
                                                                     RawMaterialResourceToken.GetUnitToken(RawMaterialType.Wood)
                                                                 },
                                                                 ApplicableDirection.Left,
+                                                                RawMaterialResourceCost.Free,
+                                                                ManufacturedMaterialResourceCost.Free,
                                                                 null,
                                                                 new Guid[] { new Guid() }
                                                                 ),
@@ -1376,15 +1560,230 @@ namespace SevenWondersGameLibrary
 
                 case Age.Two:
 
-                    // 3+ Players
+                    return new List<ICommerceCard>
+                        {
+                            // 3+ Players
 
-                    // 4+ Players
+                            // [Guid("32A9E6DF-DD0D-4276-9B8C-B621CFC0E150")]
+                            new CommerceManufactoredMaterialDiscountCard(new Guid("32A9E6DF-DD0D-4276-9B8C-B621CFC0E150"),
+                                                                Age.Two,
+                                                                "Forum",
+                                                                string.Empty,
+                                                                3,
+                                                                0,
+                                                                new ManufactoredMaterialResourceToken[]
+                                                                {
+                                                                    ManufactoredMaterialResourceToken.GetUnitToken(ManufactoredMaterialType.Glass),
+                                                                    ManufactoredMaterialResourceToken.GetUnitToken(ManufactoredMaterialType.Loom),
+                                                                    ManufactoredMaterialResourceToken.GetUnitToken(ManufactoredMaterialType.Papyrus)
+                                                                },
+                                                                ApplicableDirection.Self,
+                                                                new RawMaterialResourceCost(2,0,0,0),
+                                                                ManufacturedMaterialResourceCost.Free,
+                                                                new Guid[] {
+                                                                    new Guid("5AB7812B-AEBE-441D-AFD1-A8C980CD7C30"),
+                                                                    new Guid("5C42BD03-B380-4BC2-A8C5-11AC6D4DF827"),
+                                                                    new Guid("77CF63AC-9459-4A81-842F-4FF75BC2EC00"),
+                                                                    new Guid("D336A613-7752-4666-B09B-A11D189E8FEC"),
+                                                                    },
+                                                                new Guid[] { new Guid() }
+                                                                ),
 
-                    // 5+ Players
+                            // [Guid("803EE0A5-5B8F-4458-B10A-9CC0CEBC4A21")]
+                            new CommerceRawMaterialDiscountCard(new Guid("803EE0A5-5B8F-4458-B10A-9CC0CEBC4A21"),
+                                                                Age.Two,
+                                                                "Caravansery",
+                                                                string.Empty,
+                                                                3,
+                                                                0,
+                                                                new RawMaterialResourceToken[]
+                                                                {
+                                                                    RawMaterialResourceToken.GetUnitToken(RawMaterialType.Clay),
+                                                                    RawMaterialResourceToken.GetUnitToken(RawMaterialType.Ore),
+                                                                    RawMaterialResourceToken.GetUnitToken(RawMaterialType.Stone),
+                                                                    RawMaterialResourceToken.GetUnitToken(RawMaterialType.Wood)
+                                                                },
+                                                                ApplicableDirection.Self,
+                                                                new RawMaterialResourceCost(0,0,0,2),
+                                                                ManufacturedMaterialResourceCost.Free,
+                                                                new Guid[] {
+                                                                    new Guid("2AA1C698-1E66-4EB2-86A7-D9182CBB68EA"),
+                                                                    new Guid("927D93A5-02D3-48B5-B77C-55077A4BB8BD"),
+                                                                    },
+                                                                new Guid[] { new Guid() }
+                                                                ),
 
-                    // 6+ Players
+                            // [Guid("4F33E2AB-50E5-4AB6-A879-FF2346092488")]
+                            new CommerceRewardPerSymbolCard(new Guid("4F33E2AB-50E5-4AB6-A879-FF2346092488"),
+                                                            Age.Two,
+                                                            "Vineyard",
+                                                            string.Empty,
+                                                            3,
+                                                            SymbolType.RawResource,
+                                                            0,
+                                                            1,
+                                                            ApplicableDirection.All,
+                                                            RawMaterialResourceCost.Free,
+                                                            ManufacturedMaterialResourceCost.Free,
+                                                            null,
+                                                            null
+                                                            ),
 
-                    // 7+ Players
+                            // 4+ Players
+
+                            // [Guid("2317846F-452F-415A-92CD-30E8E049B6CA")]
+                            new CommerceRewardPerSymbolCard(new Guid("2317846F-452F-415A-92CD-30E8E049B6CA"),
+                                                            Age.Two,
+                                                            "Bazar",
+                                                            string.Empty,
+                                                            4,
+                                                            SymbolType.ManufactoredResource,
+                                                            0,
+                                                            2,
+                                                            ApplicableDirection.All,
+                                                            RawMaterialResourceCost.Free,
+                                                            ManufacturedMaterialResourceCost.Free,
+                                                            null,
+                                                            null
+                                                            ),
+
+                            // 5+ Players
+
+                            // [Guid("F5B51DBB-C276-4168-89D8-2C7E7EDC67C1")]
+                            new CommerceRawMaterialDiscountCard(new Guid("F5B51DBB-C276-4168-89D8-2C7E7EDC67C1"),
+                                                                Age.Two,
+                                                                "Caravansery",
+                                                                string.Empty,
+                                                                5,
+                                                                0,
+                                                                new RawMaterialResourceToken[]
+                                                                {
+                                                                    RawMaterialResourceToken.GetUnitToken(RawMaterialType.Clay),
+                                                                    RawMaterialResourceToken.GetUnitToken(RawMaterialType.Ore),
+                                                                    RawMaterialResourceToken.GetUnitToken(RawMaterialType.Stone),
+                                                                    RawMaterialResourceToken.GetUnitToken(RawMaterialType.Wood)
+                                                                },
+                                                                ApplicableDirection.Self,
+                                                                new RawMaterialResourceCost(0,0,0,2),
+                                                                ManufacturedMaterialResourceCost.Free,
+                                                                new Guid[] {
+                                                                    new Guid("2AA1C698-1E66-4EB2-86A7-D9182CBB68EA"),
+                                                                    new Guid("927D93A5-02D3-48B5-B77C-55077A4BB8BD"),
+                                                                    },
+                                                                new Guid[] { new Guid() }
+                                                                ),
+
+                            // 6+ Players
+
+                            // [Guid("BE956900-C1E2-437A-9F89-DFC1A80098BC")]
+                            new CommerceRawMaterialDiscountCard(new Guid("BE956900-C1E2-437A-9F89-DFC1A80098BC"),
+                                                                Age.Two,
+                                                                "Caravansery",
+                                                                string.Empty,
+                                                                6,
+                                                                0,
+                                                                new RawMaterialResourceToken[]
+                                                                {
+                                                                    RawMaterialResourceToken.GetUnitToken(RawMaterialType.Clay),
+                                                                    RawMaterialResourceToken.GetUnitToken(RawMaterialType.Ore),
+                                                                    RawMaterialResourceToken.GetUnitToken(RawMaterialType.Stone),
+                                                                    RawMaterialResourceToken.GetUnitToken(RawMaterialType.Wood)
+                                                                },
+                                                                ApplicableDirection.Self,
+                                                                new RawMaterialResourceCost(0,0,0,2),
+                                                                ManufacturedMaterialResourceCost.Free,
+                                                                new Guid[] {
+                                                                    new Guid("2AA1C698-1E66-4EB2-86A7-D9182CBB68EA"),
+                                                                    new Guid("927D93A5-02D3-48B5-B77C-55077A4BB8BD"),
+                                                                    },
+                                                                new Guid[] { new Guid() }
+                                                                ),
+
+                            // [Guid("21C3FC1E-674B-491C-A3F4-1BF8DFE11916")]
+                            new CommerceManufactoredMaterialDiscountCard(new Guid("21C3FC1E-674B-491C-A3F4-1BF8DFE11916"),
+                                                                Age.Two,
+                                                                "Forum",
+                                                                string.Empty,
+                                                                6,
+                                                                0,
+                                                                new ManufactoredMaterialResourceToken[]
+                                                                {
+                                                                    ManufactoredMaterialResourceToken.GetUnitToken(ManufactoredMaterialType.Glass),
+                                                                    ManufactoredMaterialResourceToken.GetUnitToken(ManufactoredMaterialType.Loom),
+                                                                    ManufactoredMaterialResourceToken.GetUnitToken(ManufactoredMaterialType.Papyrus)
+                                                                },
+                                                                ApplicableDirection.Self,
+                                                                new RawMaterialResourceCost(2,0,0,0),
+                                                                ManufacturedMaterialResourceCost.Free,
+                                                                new Guid[] {
+                                                                    new Guid("5AB7812B-AEBE-441D-AFD1-A8C980CD7C30"),
+                                                                    new Guid("5C42BD03-B380-4BC2-A8C5-11AC6D4DF827"),
+                                                                    new Guid("77CF63AC-9459-4A81-842F-4FF75BC2EC00"),
+                                                                    new Guid("D336A613-7752-4666-B09B-A11D189E8FEC"),
+                                                                    },
+                                                                new Guid[] { new Guid() }
+                                                                ),
+
+                            // [Guid("0C1739B9-25B6-4162-B5D9-6B195D1FBBF0")]
+                            new CommerceRewardPerSymbolCard(new Guid("0C1739B9-25B6-4162-B5D9-6B195D1FBBF0"),
+                                                            Age.Two,
+                                                            "Vineyard",
+                                                            string.Empty,
+                                                            6,
+                                                            SymbolType.RawResource,
+                                                            0,
+                                                            1,
+                                                            ApplicableDirection.All,
+                                                            RawMaterialResourceCost.Free,
+                                                            ManufacturedMaterialResourceCost.Free,
+                                                            null,
+                                                            null
+                                                            ),
+
+                            // 7+ Players
+
+                            // [Guid("DB754303-8F02-49A5-9BAE-0CCEA8B1C64D")]
+                            new CommerceRewardPerSymbolCard(new Guid("DB754303-8F02-49A5-9BAE-0CCEA8B1C64D"),
+                                                            Age.Two,
+                                                            "Bazar",
+                                                            string.Empty,
+                                                            7,
+                                                            SymbolType.ManufactoredResource,
+                                                            0,
+                                                            2,
+                                                            ApplicableDirection.All,
+                                                            RawMaterialResourceCost.Free,
+                                                            ManufacturedMaterialResourceCost.Free,
+                                                            null,
+                                                            null
+                                                            ),
+
+                            // [Guid("9498113D-1CFE-4EEC-BBDB-0F2497E72C02")]
+                            new CommerceManufactoredMaterialDiscountCard(new Guid("9498113D-1CFE-4EEC-BBDB-0F2497E72C02"),
+                                                                Age.Two,
+                                                                "Forum",
+                                                                string.Empty,
+                                                                7,
+                                                                0,
+                                                                new ManufactoredMaterialResourceToken[]
+                                                                {
+                                                                    ManufactoredMaterialResourceToken.GetUnitToken(ManufactoredMaterialType.Glass),
+                                                                    ManufactoredMaterialResourceToken.GetUnitToken(ManufactoredMaterialType.Loom),
+                                                                    ManufactoredMaterialResourceToken.GetUnitToken(ManufactoredMaterialType.Papyrus)
+                                                                },
+                                                                ApplicableDirection.Self,
+                                                                new RawMaterialResourceCost(2,0,0,0),
+                                                                ManufacturedMaterialResourceCost.Free,
+                                                                new Guid[] {
+                                                                    new Guid("5AB7812B-AEBE-441D-AFD1-A8C980CD7C30"),
+                                                                    new Guid("5C42BD03-B380-4BC2-A8C5-11AC6D4DF827"),
+                                                                    new Guid("77CF63AC-9459-4A81-842F-4FF75BC2EC00"),
+                                                                    new Guid("D336A613-7752-4666-B09B-A11D189E8FEC"),
+                                                                    },
+                                                                new Guid[] { new Guid() }
+                                                                ),
+
+                        };
 
                     throw new NotImplementedException();
 

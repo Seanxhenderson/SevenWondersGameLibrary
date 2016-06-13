@@ -24,16 +24,17 @@ namespace SevenWondersGameLibrary.DataModels
         FaceDownUsed
     }
 
-    public enum CardType
+    [Flags]
+    public enum SymbolType
     {
-        Any = 0,
-        RawResource,
+        RawResource = 0x00,
         ManufactoredResource,
         Science,
         Culture,
         Military,
         Commerce,
-        Guild
+        Guild,
+        WonderStage
     }
 
     public enum ApplicableDirection
@@ -52,17 +53,17 @@ namespace SevenWondersGameLibrary.DataModels
     public enum RawMaterialType
     {
         Clay = 0x00,
-        Ore = 0x01,
-        Stone = 0x02,
-        Wood = 0x04
+        Ore,
+        Stone,
+        Wood
     }
 
     [Flags]
     public enum ManufactoredMaterialType
     {
         Glass = 0x00,
-        Loom = 0x01,
-        Papyrus = 0x02
+        Loom,
+        Papyrus
     }
 
     public enum Age

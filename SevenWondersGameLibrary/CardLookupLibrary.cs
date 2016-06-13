@@ -87,17 +87,17 @@ namespace SevenWondersGameLibrary
                 { new Guid("D4B99FFD-010D-4F7D-8DD5-30552D67B1F9"), "[1/2][1] Pawnshop" },
                 { new Guid("6F748053-0777-4A9C-A84A-6192F0ADAD2A"), "[2/2][1] Pawnshop" },
 
-                { new Guid("90F497BA-6801-4699-BCAB-7141DA3CD96E"), "[1/2][1] Aqueduct" },
-                { new Guid("9DF416F1-ACF3-471E-BEA3-BC0996A57300"), "[2/2][1] Aqueduct" },
+                { new Guid("90F497BA-6801-4699-BCAB-7141DA3CD96E"), "[1/2][2] Aqueduct" },
+                { new Guid("9DF416F1-ACF3-471E-BEA3-BC0996A57300"), "[2/2][2] Aqueduct" },
 
-                { new Guid("08086CDA-BDE4-4C26-9393-B6ED2D6EF6FE"), "[1/2][1] Statue" },
-                { new Guid("2152CB67-F432-4E7E-B4A8-A4B6DEFCF9D9"), "[2/2][1] Statue" },
+                { new Guid("08086CDA-BDE4-4C26-9393-B6ED2D6EF6FE"), "[1/2][2] Statue" },
+                { new Guid("2152CB67-F432-4E7E-B4A8-A4B6DEFCF9D9"), "[2/2][2] Statue" },
 
-                { new Guid("3D1932E6-3A00-4EB4-A2E9-6476891AC4BE"), "[1/2][1] Courthouse" },
-                { new Guid("268573A7-894B-4EB7-AAEC-707CC92AF9FD"), "[2/2][1] Courthouse" },
+                { new Guid("3D1932E6-3A00-4EB4-A2E9-6476891AC4BE"), "[1/2][2] Courthouse" },
+                { new Guid("268573A7-894B-4EB7-AAEC-707CC92AF9FD"), "[2/2][2] Courthouse" },
 
-                { new Guid("CB97CA9A-63A4-4D1C-90E1-D2FB22FA7AB1"), "[1/2][1] Temple" },
-                { new Guid("CC884286-D176-4138-B30C-B25D5D032AF8"), "[2/2][1] Temple" },
+                { new Guid("CB97CA9A-63A4-4D1C-90E1-D2FB22FA7AB1"), "[1/2][2] Temple" },
+                { new Guid("CC884286-D176-4138-B30C-B25D5D032AF8"), "[2/2][2] Temple" },
 
                 #endregion //Culture
 
@@ -112,18 +112,18 @@ namespace SevenWondersGameLibrary
                 { new Guid("88B14BFD-13A6-4349-8CDC-0A609E64CF84"), "[1/2][1] Barracks" },
                 { new Guid("C3BB1D7E-B862-44FD-8743-9ACD5B37EC71"), "[2/2][1] Barracks" },
 
-                { new Guid("29476E9F-6C5D-4F79-86A3-80A7E83D76BA"), "[1/2][1] Stables" },
-                { new Guid("C99158E5-A008-43D7-8660-AD532A803CCF"), "[2/2][1] Stables" },
+                { new Guid("29476E9F-6C5D-4F79-86A3-80A7E83D76BA"), "[1/2][2] Stables" },
+                { new Guid("C99158E5-A008-43D7-8660-AD532A803CCF"), "[2/2][2] Stables" },
 
-                { new Guid("03BE5384-FB1D-47F1-A235-E62BED13C697"), "[1/2][1] Archery Range" },
-                { new Guid("DABA8686-0BA4-4EDE-9297-F385F64BF9A5"), "[2/2][1] Archery Range" },
+                { new Guid("03BE5384-FB1D-47F1-A235-E62BED13C697"), "[1/2][2] Archery Range" },
+                { new Guid("DABA8686-0BA4-4EDE-9297-F385F64BF9A5"), "[2/2][2] Archery Range" },
 
-                { new Guid("CCE6E9DC-1687-4BE7-8939-461DD96440AF"), "[1/2][1] Walls" },
-                { new Guid("450AEC85-B216-4026-B759-46013E608983"), "[2/2][1] Walls" },
+                { new Guid("CCE6E9DC-1687-4BE7-8939-461DD96440AF"), "[1/2][2] Walls" },
+                { new Guid("450AEC85-B216-4026-B759-46013E608983"), "[2/2][2] Walls" },
 
-                { new Guid("51FCDE3C-119E-4A16-82A0-BD8D617A6D49"), "[1/3][1] Training Ground" },
-                { new Guid("533A08A0-B6AF-4468-9773-79161BEDFD7B"), "[2/3][1] Training Ground" },
-                { new Guid("3FAFF4F3-806F-49DC-8AA5-13814745ABC2"), "[3/3][1] Training Ground" },
+                { new Guid("51FCDE3C-119E-4A16-82A0-BD8D617A6D49"), "[1/3][2] Training Ground" },
+                { new Guid("533A08A0-B6AF-4468-9773-79161BEDFD7B"), "[2/3][2] Training Ground" },
+                { new Guid("3FAFF4F3-806F-49DC-8AA5-13814745ABC2"), "[3/3][2] Training Ground" },
                 
                 #endregion //Military
 
@@ -137,6 +137,18 @@ namespace SevenWondersGameLibrary
 
                 { new Guid("75DAB02F-21B7-4C16-8EB3-760F2224E564"), "[1/2][1] Workshop" },
                 { new Guid("75F57C08-6490-4171-A281-7ACC82A4296C"), "[2/2][1] Workshop" },
+
+                { new Guid("CDE83578-2ADB-4318-A94D-07EF0218C342"), "[1/2][2] Dispensary" },
+                { new Guid("752A27A2-1857-40B8-803C-DCE3481367BB"), "[2/2][2] Dispensary" },
+
+                { new Guid("7323344C-BE83-4EE4-BB33-B7ADD7288A8D"), "[1/2][2] Laboratory" },
+                { new Guid("BA118433-A993-4C1D-B31D-FA9D97167442"), "[2/2][2] Laboratory" },
+
+                { new Guid("F998C675-70FF-43AD-A628-B25200CA354D"), "[1/2][2] Library" },
+                { new Guid("F6363E52-C30A-4CE5-AD9D-5CD8962109B9"), "[2/2][2] Library" },
+                    
+                { new Guid("288BB8E5-CA12-40B2-9D2D-9C314EB64C3F"), "[1/2][2] School" },
+                { new Guid("211BF055-C108-4CA1-BB24-CECB7CE51D7A"), "[2/2][2] School" },
 
                 #endregion //Science
 
@@ -154,6 +166,20 @@ namespace SevenWondersGameLibrary
                 { new Guid("64F1F39D-215F-4626-AB45-CD375F423966"), "[1/3][1] Tavern" },
                 { new Guid("26A7245F-2017-482E-9DC1-43E68D046EDF"), "[2/3][1] Tavern" },
                 { new Guid("2B4EDF1F-27DB-4B66-8CE1-5699E1DB1CA5"), "[3/3][1] Tavern" },
+
+                { new Guid("32A9E6DF-DD0D-4276-9B8C-B621CFC0E150"), "[1/3][2] Forum" },
+                { new Guid("21C3FC1E-674B-491C-A3F4-1BF8DFE11916"), "[2/3][2] Forum" },
+                { new Guid("9498113D-1CFE-4EEC-BBDB-0F2497E72C02"), "[3/3][2] Forum" },
+
+                { new Guid("2317846F-452F-415A-92CD-30E8E049B6CA"), "[1/2][2] Bazar" },
+                { new Guid("DB754303-8F02-49A5-9BAE-0CCEA8B1C64D"), "[2/2][2] Bazar" },
+
+                { new Guid("4F33E2AB-50E5-4AB6-A879-FF2346092488"), "[1/2][2] Vineyard" },
+                { new Guid("0C1739B9-25B6-4162-B5D9-6B195D1FBBF0"), "[2/2][2] Vineyard" },
+
+                { new Guid("803EE0A5-5B8F-4458-B10A-9CC0CEBC4A21"), "[1/3][2] Caravansery" },
+                { new Guid("F5B51DBB-C276-4168-89D8-2C7E7EDC67C1"), "[2/3][2] Caravansery" },
+                { new Guid("BE956900-C1E2-437A-9F89-DFC1A80098BC"), "[3/3][2] Caravansery" },
 
                 #endregion //Commerce
 

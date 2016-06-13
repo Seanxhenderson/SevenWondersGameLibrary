@@ -86,6 +86,15 @@ namespace SevenWondersGameLibrary.DataModels
         uint GoldValue { get; }
     }
 
+    public interface ICommerceRewardPerSymbolCard : ICommerceCard
+    {
+        SymbolType SymbolType { get; }
+
+        uint VictoryPointsPerSymbolType { get; }
+
+        uint GoldPerSymbolType { get; }
+    }
+
     public interface IGuildCard : IAgeCard
     {
 
