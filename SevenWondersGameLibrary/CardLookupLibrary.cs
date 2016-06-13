@@ -180,6 +180,21 @@ namespace SevenWondersGameLibrary
                 { new Guid("288BB8E5-CA12-40B2-9D2D-9C314EB64C3F"), "[1/2][2] School" },
                 { new Guid("211BF055-C108-4CA1-BB24-CECB7CE51D7A"), "[2/2][2] School" },
 
+                { new Guid("FA6D0CC0-F45C-4A14-86F9-DB2D8CBF7CD9"), "[1/2][3] Academy" },
+                { new Guid("A5B8E5FC-DD3B-44CB-BB8D-AB5BD293A001"), "[2/2][3] Academy" },
+
+                { new Guid("1CDBE914-B282-410D-A9F5-24BD6EBA35A8"), "[1/2][3] Lodge" },
+                { new Guid("1A1EBD02-A9C5-4AD7-AC37-FE79A94DD2E3"), "[2/2][3] Lodge" },
+
+                { new Guid("D0098D10-2B42-403F-9224-B0D6CE2FB8B1"), "[1/2][3] Observatory" },
+                { new Guid("BCA3532C-4941-4C8D-9230-91ED4A046417"), "[2/2][3] Observatory" },
+
+                { new Guid("DC62CEF2-E0B4-4F7A-8905-57DB3343AE62"), "[1/2][3] Study" },
+                { new Guid("DECA18D5-5457-4A05-A570-A06E2B72BF21"), "[2/2][3] Study" },
+
+                { new Guid("6DAC1D4A-AA1B-47B4-BF10-B921C6B5FC15"), "[1/2][3] University" },
+                { new Guid("CDC10505-4BC2-4E9F-BCCD-4BFC686BF667"), "[2/2][3] University" },
+
                 #endregion //Science
 
                 #region Commerce
@@ -210,6 +225,19 @@ namespace SevenWondersGameLibrary
                 { new Guid("803EE0A5-5B8F-4458-B10A-9CC0CEBC4A21"), "[1/3][2] Caravansery" },
                 { new Guid("F5B51DBB-C276-4168-89D8-2C7E7EDC67C1"), "[2/3][2] Caravansery" },
                 { new Guid("BE956900-C1E2-437A-9F89-DFC1A80098BC"), "[3/3][2] Caravansery" },
+
+                { new Guid("FA5DD91A-CFC7-498D-B769-F7D4E45E0C54"), "[1/3][3] Arena" },
+                { new Guid("02A33DBB-09E0-43FD-8089-4B3DA30D9C89"), "[2/3][3] Arena" },
+                { new Guid("0B5AA6E5-6394-49F4-AFCE-DFFA6DE82C33"), "[3/3][3] Arena" },
+
+                { new Guid("75601DF5-3B30-4F4D-8AA1-513DE75C9A77"), "[1/2][3] Chamber of Commerce" },
+                { new Guid("E20DDEDB-0B13-4F47-AEA5-051592B1CBDC"), "[2/2][3] Chamber of Commerce" },
+
+                { new Guid("9D09C82E-8D17-4A5C-A197-43474065E06C"), "[1/2][3] Haven" },
+                { new Guid("9699BF11-5A8D-451C-93F9-00714B2162FA"), "[2/2][3] Haven" },
+
+                { new Guid("9BA92D10-25EF-410F-B13E-92A63468FD6C"), "[1/2][3] Lighthouse" },
+                { new Guid("3C0BDBC3-1DA1-4C71-9A34-4B53DC0AB619"), "[2/2][3] Lighthouse" },
 
                 #endregion //Commerce
 
