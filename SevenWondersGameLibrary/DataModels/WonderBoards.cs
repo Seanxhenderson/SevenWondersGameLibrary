@@ -1,11 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.Serialization;
 using System.Text;
 using System.Threading.Tasks;
 
 namespace SevenWondersGameLibrary.DataModels
 {
+    [DataContract]
     public abstract class Stage : IStage
     {
         public Stage(
@@ -24,36 +26,42 @@ namespace SevenWondersGameLibrary.DataModels
             this.RawMaterialResourceCost = rawMaterialResourceCost;
         }
 
+        [DataMember]
         public Guid ParentWonderBoardId
         {
             get;
             private set;
         }
 
+        [DataMember]
         public uint Level
         {
             get;
             private set;
         }
 
+        [DataMember]
         public string Description
         {
             get;
             private set;
         }
 
+        [DataMember]
         public uint GoldCost
         {
             get;
             private set;
         }
 
+        [DataMember]
         public ManufacturedMaterialResourceCost ManufacturedMaterialResourceCost
         {
             get;
             private set;
         }
 
+        [DataMember]
         public RawMaterialResourceCost RawMaterialResourceCost
         {
             get;
@@ -61,6 +69,7 @@ namespace SevenWondersGameLibrary.DataModels
         }
     }
 
+    [DataContract]
     public class VictoryAwardStage : Stage
     {
         public VictoryAwardStage(
@@ -76,6 +85,7 @@ namespace SevenWondersGameLibrary.DataModels
             this.VictoryPointsAwarded = victoryPointsAwarded;
         }
 
+        [DataMember]
         public uint VictoryPointsAwarded
         {
             get;
@@ -83,6 +93,7 @@ namespace SevenWondersGameLibrary.DataModels
         }
     }
 
+    [DataContract]
     public class MilitaryAwardStage : Stage
     {
         public MilitaryAwardStage(
@@ -98,6 +109,7 @@ namespace SevenWondersGameLibrary.DataModels
             this.MilitaryPointsAwarded = militaryPointsAwarded;
         }
 
+        [DataMember]
         public uint MilitaryPointsAwarded
         {
             get;
@@ -105,6 +117,7 @@ namespace SevenWondersGameLibrary.DataModels
         }
     }
 
+    [DataContract]
     public class ScienceAwardStage : Stage
     {
         public ScienceAwardStage(
@@ -122,12 +135,14 @@ namespace SevenWondersGameLibrary.DataModels
             this.AvailableScienceTypes = availableScienceTypes;
         }
 
+        [DataMember]
         public uint SciencePointsAwarded
         {
             get;
             private set;
         }
 
+        [DataMember]
         public IEnumerable<ScienceType> AvailableScienceTypes
         {
             get;
@@ -135,6 +150,7 @@ namespace SevenWondersGameLibrary.DataModels
         }
     }
 
+    [DataContract]
     public class RawMaterialAwardStage : Stage
     {
         public RawMaterialAwardStage(
@@ -152,12 +168,14 @@ namespace SevenWondersGameLibrary.DataModels
             this.AvailableRawMaterialTypes = availableRawMaterialTypes;
         }
 
+        [DataMember]
         public uint RawMaterialPointsAwarded
         {
             get;
             private set;
         }
 
+        [DataMember]
         public IEnumerable<RawMaterialType> AvailableRawMaterialTypes
         {
             get;
@@ -165,6 +183,7 @@ namespace SevenWondersGameLibrary.DataModels
         }
     }
 
+    [DataContract]
     public class ManufactoredMaterialAwardStage : Stage
     {
         public ManufactoredMaterialAwardStage(
@@ -182,12 +201,14 @@ namespace SevenWondersGameLibrary.DataModels
             this.AvailableManufactoredMaterialTypes = availableManufactoredMaterialTypes;
         }
 
+        [DataMember]
         public uint ManufactoredMaterialPointsAwarded
         {
             get;
             private set;
         }
 
+        [DataMember]
         public IEnumerable<ManufactoredMaterialType> AvailableManufactoredMaterialTypes
         {
             get;
@@ -195,6 +216,7 @@ namespace SevenWondersGameLibrary.DataModels
         }
     }
 
+    [DataContract]
     public class GoldAwardStage : Stage
     {
         public GoldAwardStage(
@@ -210,6 +232,7 @@ namespace SevenWondersGameLibrary.DataModels
             this.GoldAwarded = goldAwarded;
         }
 
+        [DataMember]
         public uint GoldAwarded
         {
             get;
@@ -217,6 +240,7 @@ namespace SevenWondersGameLibrary.DataModels
         }
     }
 
+    [DataContract]
     public class TriplePointsAwardStage : Stage
     {
         public TriplePointsAwardStage(
@@ -236,18 +260,21 @@ namespace SevenWondersGameLibrary.DataModels
             this.VictoryPointsAwarded = victoryPointsAwarded;
         }
 
+        [DataMember]
         public uint GoldAwarded
         {
             get;
             private set;
         }
 
+        [DataMember]
         public uint MilitaryPointsAwarded
         {
             get;
             private set;
         }
 
+        [DataMember]
         public uint VictoryPointsAwarded
         {
             get;
@@ -255,6 +282,7 @@ namespace SevenWondersGameLibrary.DataModels
         }
     }
 
+    [DataContract]
     public class FreeCardAwardStage : Stage
     {
         public FreeCardAwardStage(
@@ -272,12 +300,14 @@ namespace SevenWondersGameLibrary.DataModels
             this.NumberOfCardsPerAge = numberOfCardsPerAge;
         }
 
+        [DataMember]
         public IEnumerable<Age> AvailableAges
         {
             get;
             private set;
         }
 
+        [DataMember]
         public uint NumberOfCardsPerAge
         {
             get;
@@ -285,6 +315,7 @@ namespace SevenWondersGameLibrary.DataModels
         }
     }
 
+    [DataContract]
     public class DiscardedCardAwardStage : Stage
     {
         public DiscardedCardAwardStage(
@@ -301,6 +332,7 @@ namespace SevenWondersGameLibrary.DataModels
             this.NumberOfCardsGained = numberOfCardsGained;
         }
 
+        [DataMember]
         public uint NumberOfCardsGained
         {
             get;
@@ -308,6 +340,7 @@ namespace SevenWondersGameLibrary.DataModels
         }
     }
 
+    [DataContract]
     public class WonderBoard : IWonderBoard
     {
         public WonderBoard(Guid id, string name, string description, ResourceToken primaryResource, uint numberOfStages, IEnumerable<IStage> stages)
@@ -320,41 +353,48 @@ namespace SevenWondersGameLibrary.DataModels
             this.Stages = stages;
         }
 
+        [DataMember]
         public string Description
         {
             get;
             private set;
         }
 
+        [DataMember]
         public Guid Id
         {
             get;
             private set;
         }
 
+        [DataMember]
         public string ImageUrl
         {
             get { throw new NotImplementedException(); }
         }
 
+        [DataMember]
         public string Name
         {
             get;
             private set;
         }
 
+        [DataMember]
         public uint NumberOfStages
         {
             get;
             private set;
         }
 
+        [DataMember]
         public ResourceToken PrimaryResource
         {
             get;
             private set;
         }
 
+        [DataMember]
         public IEnumerable<IStage> Stages
         {
             get;

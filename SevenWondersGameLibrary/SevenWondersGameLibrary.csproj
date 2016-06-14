@@ -109,7 +109,6 @@
   <ItemGroup>
     <Compile Include="CardFactory.cs" />
     <Compile Include="CardLookupLibrary.cs" />
-    <Compile Include="DataModels\CardIds.cs" />
     <Compile Include="DataModels\Cards.cs" />
     <Compile Include="DataModels\ICards.cs" />
     <Compile Include="DataModels\IWonderBoards.cs" />
@@ -121,7 +120,7 @@
     <EmbeddedResource Include="Properties\SevenWondersGameLibrary.rd.xml" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Execution\" />
+    <Folder Include="Serialization\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="ReadMe.txt" />

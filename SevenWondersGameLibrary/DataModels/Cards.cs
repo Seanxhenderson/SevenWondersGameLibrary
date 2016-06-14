@@ -2,11 +2,13 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.Serialization;
 using System.Text;
 using System.Threading.Tasks;
 
 namespace SevenWondersGameLibrary.DataModels
 {
+    [DataContract]
     public abstract class AgeCard : IAgeCard
     {
         public AgeCard(
@@ -34,30 +36,35 @@ namespace SevenWondersGameLibrary.DataModels
             this.CurrentState = CardState.NotAvailable;
         }
 
+        [DataMember]
         public Guid Id
         {
             get;
             private set;
         }
 
+        [DataMember]
         public Age Age
         {
             get;
             private set;
         }
 
+        [DataMember]
         public string Description
         {
             get;
             private set;
         }
 
+        [DataMember]
         public uint GoldCost
         {
             get;
             private set;
         }
 
+        [DataMember]
         public string ImageUrl
         {
             get
@@ -66,42 +73,49 @@ namespace SevenWondersGameLibrary.DataModels
             }
         }
 
+        [DataMember]
         public uint MinimumNumberOfPlayers
         {
             get;
             private set;
         }
 
+        [DataMember]
         public IEnumerable<Guid> BaseCardId
         {
             get;
             protected set;
         }
 
+        [DataMember]
         public IEnumerable<Guid> DerivedCardIds
         {
             get;
             protected set;
         }
 
+        [DataMember]
         public RawMaterialResourceCost RawMaterialResourceCost
         {
             get;
             private set;
         }
 
+        [DataMember]
         public ManufacturedMaterialResourceCost ManufacturedMaterialResourceCost
         {
             get;
             private set;
         }
 
+        [DataMember]
         public string Title
         {
             get;
             private set;
         }
 
+        [DataMember]
         public CardState CurrentState
         {
             get;
@@ -109,6 +123,7 @@ namespace SevenWondersGameLibrary.DataModels
         }
     }
 
+    [DataContract]
     public sealed class RawMaterialCard : AgeCard, IRawMaterialCard
     {
         public RawMaterialCard(
@@ -124,6 +139,7 @@ namespace SevenWondersGameLibrary.DataModels
             this.Resources = resources;
         }
 
+        [DataMember]
         public IEnumerable<RawMaterialResourceToken> Resources
         {
             get;
@@ -131,6 +147,7 @@ namespace SevenWondersGameLibrary.DataModels
         }
     }
 
+    [DataContract]
     public sealed class ManufacturedGoodCard : AgeCard, IManufacturedMaterialCard
     {
         public ManufacturedGoodCard(
@@ -146,6 +163,7 @@ namespace SevenWondersGameLibrary.DataModels
             this.Resources = resources;
         }
 
+        [DataMember]
         public IEnumerable<ManufactoredMaterialResourceToken> Resources 
         {
             get;
@@ -153,6 +171,7 @@ namespace SevenWondersGameLibrary.DataModels
         }
     }
 
+    [DataContract]
     public sealed class CultureCard : AgeCard, ICultureCard
     {
         public CultureCard(
@@ -171,6 +190,7 @@ namespace SevenWondersGameLibrary.DataModels
             this.VictoryValue = victoryValue;
         }
 
+        [DataMember]
         public uint VictoryValue
         {
             get;
@@ -178,6 +198,7 @@ namespace SevenWondersGameLibrary.DataModels
         }
     }
 
+    [DataContract]
     public sealed class MilitaryCard : AgeCard, IMilitaryCard
     {
         public MilitaryCard(
@@ -196,6 +217,7 @@ namespace SevenWondersGameLibrary.DataModels
             this.MilitaryValue = militaryValue;
         }
 
+        [DataMember]
         public uint MilitaryValue
         {
             get;
@@ -203,6 +225,7 @@ namespace SevenWondersGameLibrary.DataModels
         }
     }
 
+    [DataContract]
     public sealed class ScienceCard : AgeCard, IScienceCard
     {
         public ScienceCard(
@@ -221,6 +244,7 @@ namespace SevenWondersGameLibrary.DataModels
             this.ScienceType = scienceType;
         }
 
+        [DataMember]
         public ScienceType ScienceType
         {
             get;
@@ -228,6 +252,7 @@ namespace SevenWondersGameLibrary.DataModels
         }
     }
 
+    [DataContract]
     public abstract class CommerceCardBase : AgeCard, ICommerceCard
     {
         public CommerceCardBase(
@@ -246,6 +271,7 @@ namespace SevenWondersGameLibrary.DataModels
             this.UsabilityDirection = usabilityDirection;
         }
 
+        [DataMember]
         public ApplicableDirection UsabilityDirection
         {
             get;
@@ -253,6 +279,7 @@ namespace SevenWondersGameLibrary.DataModels
         }
     }
 
+    [DataContract]
     public sealed class CommerceRawMaterialDiscountCard : CommerceCardBase, ICommerceRawMaterialDiscountCard
     {
         public CommerceRawMaterialDiscountCard(
@@ -274,12 +301,14 @@ namespace SevenWondersGameLibrary.DataModels
             this.RawMaterialTokens = rawMaterialTokens;
         }
 
+        [DataMember]
         public uint DiscountedCost
         {
             get;
             private set;
         }
 
+        [DataMember]
         public IEnumerable<RawMaterialResourceToken> RawMaterialTokens
         {
             get;
@@ -287,6 +316,7 @@ namespace SevenWondersGameLibrary.DataModels
         }
     }
 
+    [DataContract]
     public sealed class CommerceManufactoredMaterialDiscountCard : CommerceCardBase, ICommerceManufactoredMaterialDiscountCard
     {
         public CommerceManufactoredMaterialDiscountCard(
@@ -308,12 +338,14 @@ namespace SevenWondersGameLibrary.DataModels
             this.ManufactoredMaterialTokens = manufactoredMaterialTokens;
         }
 
+        [DataMember]
         public uint DiscountedCost
         {
             get;
             private set;
         }
 
+        [DataMember]
         public IEnumerable<ManufactoredMaterialResourceToken> ManufactoredMaterialTokens
         {
             get;
@@ -321,6 +353,7 @@ namespace SevenWondersGameLibrary.DataModels
         }
     }
 
+    [DataContract]
     public sealed class CommerceGoldCard : CommerceCardBase, ICommerceGoldCard
     {
         public CommerceGoldCard(
@@ -340,6 +373,7 @@ namespace SevenWondersGameLibrary.DataModels
             this.GoldValue = goldValue;
         }
 
+        [DataMember]
         public uint GoldValue
         {
             get;
@@ -347,6 +381,7 @@ namespace SevenWondersGameLibrary.DataModels
         }
     }
 
+    [DataContract]
     public sealed class CommerceRewardPerSymbolCard : CommerceCardBase, ICommerceRewardPerSymbolCard
     {
         public CommerceRewardPerSymbolCard(
@@ -370,18 +405,21 @@ namespace SevenWondersGameLibrary.DataModels
             this.GoldPerSymbolType = goldPerSymbolType;
         }
 
+        [DataMember]
         public SymbolType SymbolType
         {
             get;
             private set;
         }
 
+        [DataMember]
         public uint VictoryPointsPerSymbolType
         {
             get;
             private set;
         }
 
+        [DataMember]
         public uint GoldPerSymbolType
         {
             get;
@@ -389,6 +427,7 @@ namespace SevenWondersGameLibrary.DataModels
         }
     }
 
+    [DataContract]
     public abstract class GuildCardBase : AgeCard, IGuildCard
     {
         public GuildCardBase(
@@ -407,6 +446,7 @@ namespace SevenWondersGameLibrary.DataModels
             this.UsabilityDirection = usabilityDirection;
         }
 
+        [DataMember]
         public ApplicableDirection UsabilityDirection
         {
             get;
@@ -414,6 +454,7 @@ namespace SevenWondersGameLibrary.DataModels
         }
     }
 
+    [DataContract]
     public sealed class GuildRewardPerSymbolCard : GuildCardBase, IGuildRewardPerSymbolCard
     {
         public GuildRewardPerSymbolCard(
@@ -435,12 +476,14 @@ namespace SevenWondersGameLibrary.DataModels
             this.VictoryPointsPerSymbolType = victoryPointsPerSymbolType;
         }
 
+        [DataMember]
         public SymbolType SymbolType
         {
             get;
             private set;
         }
 
+        [DataMember]
         public uint VictoryPointsPerSymbolType
         {
             get;
@@ -448,6 +491,7 @@ namespace SevenWondersGameLibrary.DataModels
         }
     }
 
+    [DataContract]
     public sealed class GuildRewardScienceCard : GuildCardBase, IGuildRewardScienceCard
     {
         public GuildRewardScienceCard(
@@ -467,6 +511,7 @@ namespace SevenWondersGameLibrary.DataModels
             this.ScienceRewardType = scienceRewardType;
         }
 
+        [DataMember]
         public ScienceType ScienceRewardType
         {
             get;
