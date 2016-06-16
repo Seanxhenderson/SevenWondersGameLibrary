@@ -107,8 +107,15 @@
     <None Include="project.json" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Execution\GameEngine.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Properties\SevenWondersGameEngine.rd.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\SevenWondersGameLibrary\SevenWondersGameLibrary.csproj">
+      <Project>{ad48ec06-b852-4fdd-a9f5-0938c9c545c5}</Project>
+      <Name>SevenWondersGameLibrary</Name>
+    </ProjectReference>
   </ItemGroup>
   <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '14.0' ">
     <VisualStudioVersion>14.0</VisualStudioVersion>

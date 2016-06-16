@@ -9,6 +9,13 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SevenWondersGameLibraryUnit
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SevenWondersGameEngine", "SevenWondersGameEngine\SevenWondersGameEngine.csproj", "{A3F0F009-C081-4D61-92E6-0366C7C209B4}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SevenWondersJsonSimulation", "SevenWondersJsonSimulation\SevenWondersJsonSimulation.csproj", "{7E380F3E-A6FC-48B3-B423-751946B1C47A}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{BE3A1F55-4F27-410D-AC42-9045E2FBA93A}"
+	ProjectSection(SolutionItems) = preProject
+		WebEssentials2015-Settings.json = WebEssentials2015-Settings.json
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -69,6 +76,28 @@ Global
 		{A3F0F009-C081-4D61-92E6-0366C7C209B4}.Release|x64.Build.0 = Release|x64
 		{A3F0F009-C081-4D61-92E6-0366C7C209B4}.Release|x86.ActiveCfg = Release|x86
 		{A3F0F009-C081-4D61-92E6-0366C7C209B4}.Release|x86.Build.0 = Release|x86
+		{7E380F3E-A6FC-48B3-B423-751946B1C47A}.Debug|Any CPU.ActiveCfg = Debug|x86
+		{7E380F3E-A6FC-48B3-B423-751946B1C47A}.Debug|Any CPU.Build.0 = Debug|x86
+		{7E380F3E-A6FC-48B3-B423-751946B1C47A}.Debug|Any CPU.Deploy.0 = Debug|x86
+		{7E380F3E-A6FC-48B3-B423-751946B1C47A}.Debug|ARM.ActiveCfg = Debug|ARM
+		{7E380F3E-A6FC-48B3-B423-751946B1C47A}.Debug|ARM.Build.0 = Debug|ARM
+		{7E380F3E-A6FC-48B3-B423-751946B1C47A}.Debug|ARM.Deploy.0 = Debug|ARM
+		{7E380F3E-A6FC-48B3-B423-751946B1C47A}.Debug|x64.ActiveCfg = Debug|x64
+		{7E380F3E-A6FC-48B3-B423-751946B1C47A}.Debug|x64.Build.0 = Debug|x64
+		{7E380F3E-A6FC-48B3-B423-751946B1C47A}.Debug|x64.Deploy.0 = Debug|x64
+		{7E380F3E-A6FC-48B3-B423-751946B1C47A}.Debug|x86.ActiveCfg = Debug|x86
+		{7E380F3E-A6FC-48B3-B423-751946B1C47A}.Debug|x86.Build.0 = Debug|x86
+		{7E380F3E-A6FC-48B3-B423-751946B1C47A}.Debug|x86.Deploy.0 = Debug|x86
+		{7E380F3E-A6FC-48B3-B423-751946B1C47A}.Release|Any CPU.ActiveCfg = Release|x86
+		{7E380F3E-A6FC-48B3-B423-751946B1C47A}.Release|ARM.ActiveCfg = Release|ARM
+		{7E380F3E-A6FC-48B3-B423-751946B1C47A}.Release|ARM.Build.0 = Release|ARM
+		{7E380F3E-A6FC-48B3-B423-751946B1C47A}.Release|ARM.Deploy.0 = Release|ARM
+		{7E380F3E-A6FC-48B3-B423-751946B1C47A}.Release|x64.ActiveCfg = Release|x64
+		{7E380F3E-A6FC-48B3-B423-751946B1C47A}.Release|x64.Build.0 = Release|x64
+		{7E380F3E-A6FC-48B3-B423-751946B1C47A}.Release|x64.Deploy.0 = Release|x64
+		{7E380F3E-A6FC-48B3-B423-751946B1C47A}.Release|x86.ActiveCfg = Release|x86
+		{7E380F3E-A6FC-48B3-B423-751946B1C47A}.Release|x86.Build.0 = Release|x86
+		{7E380F3E-A6FC-48B3-B423-751946B1C47A}.Release|x86.Deploy.0 = Release|x86
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

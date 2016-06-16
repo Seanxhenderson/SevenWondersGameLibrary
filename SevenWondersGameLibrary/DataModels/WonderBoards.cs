@@ -370,7 +370,8 @@ namespace SevenWondersGameLibrary.DataModels
         [DataMember]
         public string ImageUrl
         {
-            get { throw new NotImplementedException(); }
+            get;
+            private set; 
         }
 
         [DataMember]
